@@ -1,0 +1,38 @@
+@font-face {font-family: "Pretendard"; font-weight: 100; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-Thin.woff2);}
+@font-face {font-family: "Pretendard"; font-weight: 200; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-ExtraLight.woff2);}
+@font-face {font-family: "Pretendard"; font-weight: 300; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-Light.woff2);}
+@font-face {font-family: "Pretendard"; font-weight: 400; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-Regular.woff2);}
+@font-face {font-family: "Pretendard"; font-weight: 500; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-Medium.woff2);}
+@font-face {font-family: "Pretendard"; font-weight: 600; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-SemiBold.woff2);}
+@font-face {font-family: "Pretendard"; font-weight: 700; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-Bold.woff2);}
+@font-face {font-family: "Pretendard"; font-weight: 800; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-ExtraBold.woff2);}
+@font-face {font-family: "Pretendard"; font-weight: 900; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-Black.woff2);}
+
+* {font-family: 'Pretendard'; font-weight: 900; text-decoration: none; color: #000; -webkit-tap-highlight-color: #000; margin: 0; padding: 0;}
+
+p.liveClock {width: 97vw; height: 6vw; font-size: 5vw; text-align: left; padding: 3vw 0 3vw 3vw; background: #fff;}
+
+table.cal {width: 90vw; height: 120vw; text-align: left; margin-left: 5vw;}
+    
+    thead {vertical-align: middle;}
+        tr.monthInfo {text-align: center; height: 15vw;}
+            td.prev {font-size: 7vw; width: calc(90vw/7);}
+            td.month {font-size: 4vw; width: calc(90vw/7*5);}
+            td.next {font-size: 7vw; width: calc(90vw/7);}
+        tr.dotw {vertical-align: middle; height: 15vw; vertical-align: top;}
+            tr.dotw td {font-size: 4vw; text-align: center; font-weight: 400;}
+    
+    tbody {vertical-align: top; font-size: 5vw;}
+        tr.date {text-align: center; height: 18vw;}
+            tr.date td {font-weight: 400; width: calc(90vw/7);}
+                tr.date td:nth-child(1) {color: #ff0000;}
+                tr.date td:nth-child(7) {color: #0072de;}
+            td.prevMonth, td.nextMonth {opacity: 30%;}
+
+            .red, .blue, .gray {width: 2vw; height: 1.9vw; border-radius: 100%; display: inline-block; margin-bottom: 2vw;}
+            .red {background: #ff0000;}
+            .blue {background: #0072de;}
+            .gray {background: #808080;}
+
+    span.info {font-size: 2vw; width: 90vw; margin-left: 5vw;}
+        p.info {display: inline-block; font-weight: 400;}
