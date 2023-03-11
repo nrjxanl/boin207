@@ -10,15 +10,17 @@
 
 * {font-family: 'Pretendard'; font-weight: 900; text-decoration: none; color: #000; -webkit-tap-highlight-color: #000; margin: 0; padding: 0;}
 
-p.liveClock {width: 97vw; height: 6vw; font-size: 5vw; text-align: left; padding: 3vw 0 3vw 3vw; background: #fff;}
+body {background: #fff; -ms-overflow-style: none; width: 1200vw; text-align: center; white-space: nowrap; overflow-x: hidden; overflow-y: hidden; display: flex;}
 
-table.cal {width: 90vw; height: 120vw; text-align: left; margin-left: 5vw;}
+p.liveClock {width: 97vw; height: 6vw; font-size: 5vw; text-align: left; padding: 3vw 0 3vw 3vw; background: #fff; position: fixed; z-index: 13;}
+
+table.cal {width: 100vw; height: 120vw; text-align: left; background: #fff; display: inline-block;}
     
     thead {vertical-align: middle;}
         tr.monthInfo {text-align: center; height: 15vw;}
-            td.prev {font-size: 7vw; width: calc(90vw/7);}
-            td.month {font-size: 4vw; width: calc(90vw/7*5);}
-            td.next {font-size: 7vw; width: calc(90vw/7);}
+            td.prev {font-size: 7vw;}
+            td.month {font-size: 4vw;}
+            td.next {font-size: 7vw;}
         tr.dotw {vertical-align: middle; height: 15vw; vertical-align: top;}
             tr.dotw td {font-size: 4vw; text-align: center; font-weight: 400;}
     
