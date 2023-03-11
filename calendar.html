@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width" initial-scale=1.0>
-    <link rel="stylesheet" href="https://nrjxanl.github.io/boin207/style1.css" media="(max-width: 430px)">
+    <link rel="stylesheet" href="./style1.css" media="(max-width: 430px)">
 </head>
 
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
@@ -12,12 +12,12 @@
     <!-- <p class="liveClock"></p>
     <script src="./liveclock.js"></script> -->
 
-    <table class="cal" id="mar" style="z-index: 12;">
+    <table class="cal" id="mar">
         <thead>
             <tr class="monthInfo">
-                <td class="prev" onclick="prev();">◂</td>
+                <td class="prev">◂</td>
                 <td class="month" colspan="5">2023년 3월</td>
-                <td class="next" onclick="next();">▸</td>
+                <td class="next" onclick="april();">▸</td>
                 <script src="./month.js"></script>
             </tr>
             <tr class="dotw">
@@ -91,12 +91,12 @@
         </tbody>
     </table>
 
-    <table class="cal" id="apr" style="z-index: 11;">
+    <table class="cal" id="apr">
         <thead>
             <tr class="monthInfo">
-                <td class="prev" onclick="prev();">◂</td>
+                <td class="prev" onclick="march();">◂</td>
                 <td class="month" colspan="5">2023년 4월</td>
-                <td class="next" onclick="next();">▸</td>
+                <td class="next" onclick="may();">▸</td>
             </tr>
             <tr class="dotw">
                 <td>일</td>
@@ -151,14 +151,22 @@
                 <td>25</td>
                 <td>26</td>
                 <td>37</td>
-                <td>28</td>
+                <td>28<br>
+                    <div class="red"></div>
+                </td>
                 <td>29</td>
             </tr>
             <tr class="date">
                 <td>30</td>
-                <td class="nextMonth">1</td>
-                <td class="nextMonth">2</td>
-                <td class="nextMonth">3</td>
+                <td class="nextMonth">1<br>
+                    <div class="red"></div>
+                </td>
+                <td class="nextMonth">2<br>
+                    <div class="red"></div>
+                </td>
+                <td class="nextMonth">3<br>
+                    <div class="red"></div>
+                </td>
                 <td class="nextMonth">4</td>
                 <td class="nextMonth">5</td>
                 <td class="nextMonth">6</td>
@@ -166,12 +174,12 @@
         </tbody>
     </table>
 
-    <table class="cal" id="may" style="z-index: 10;">
+    <table class="cal" id="may">
         <thead>
             <tr class="monthInfo">
-                <td class="prev" onclick="prev();">◂</td>
+                <td class="prev" onclick="april();">◂</td>
                 <td class="month" colspan="5">2023년 5월</td>
-                <td class="next" onclick="next();">▸</td>
+                <td class="next" onclick="june();">▸</td>
             </tr>
             <tr class="dotw">
                 <td>일</td>
@@ -186,9 +194,15 @@
         <tbody>
             <tr class="date">
                 <td class="prevMonth">30</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
+                <td>1<br>
+                    <div class="red"></div>
+                </td>
+                <td>2<br>
+                    <div class="red"></div>
+                </td>
+                <td>3<br>
+                    <div class="red"></div>
+                </td>
                 <td>4</td>
                 <td>5</td>
                 <td>6</td>
@@ -232,12 +246,12 @@
         </tbody>
     </table>
 
-    <table class="cal" id="jun" style="z-index: 9;">
+    <table class="cal" id="jun">
         <thead>
             <tr class="monthInfo">
-                <td class="prev" onclick="prev();">◂</td>
+                <td class="prev" onclick="may();">◂</td>
                 <td class="month" colspan="5">2023년 6월</td>
-                <td class="next" onclick="next();">▸</td>
+                <td class="next" onclick="july();">▸</td>
             </tr>
             <tr class="dotw">
                 <td>일</td>
@@ -298,12 +312,12 @@
         </tbody>
     </table>
 
-    <table class="cal" id="jul" style="z-index: 8;">
+    <table class="cal" id="jul">
         <thead>
             <tr class="monthInfo">
-                <td class="prev" onclick="prev();">◂</td>
+                <td class="prev" onclick="june();">◂</td>
                 <td class="month" colspan="5">2023년 7월</td>
-                <td class="next" onclick="next();">▸</td>
+                <td class="next" onclick="august();">▸</td>
             </tr>
             <tr class="dotw">
                 <td>일</td>
@@ -327,11 +341,21 @@
             </tr>
             <tr class="date">
                 <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
+                <td>3<br>
+                    <div class="red"></div>
+                </td>
+                <td>4<br>
+                    <div class="red"></div>
+                </td>
+                <td>5<br>
+                    <div class="red"></div>
+                </td>
+                <td>6<br>
+                    <div class="red"></div>
+                </td>
+                <td>7<br>
+                    <div class="red"></div>
+                </td>
                 <td>8</td>
             </tr>
             <tr class="date">
@@ -373,12 +397,12 @@
         </tbody>
     </table>
 
-    <table class="cal" id="aug" style="z-index: 7;">
+    <table class="cal" id="aug">
         <thead>
             <tr class="monthInfo">
-                <td class="prev" onclick="prev();">◂</td>
+                <td class="prev" onclick="july();">◂</td>
                 <td class="month" colspan="5">2023년 8월</td>
-                <td class="next" onclick="next();">▸</td>
+                <td class="next" onclick="september();">▸</td>
             </tr>
             <tr class="dotw">
                 <td>일</td>
@@ -439,12 +463,12 @@
         </tbody>
     </table>
 
-    <table class="cal" id="sep" style="z-index: 6;">
+    <table class="cal" id="sep">
         <thead>
             <tr class="monthInfo">
-                <td class="prev" onclick="prev();">◂</td>
+                <td class="prev" onclick="august();">◂</td>
                 <td class="month" colspan="5">2023년 9월</td>
-                <td class="next" onclick="next();">▸</td>
+                <td class="next" onclick="october();">▸</td>
             </tr>
             <tr class="dotw">
                 <td>일</td>
@@ -470,7 +494,9 @@
                 <td>3</td>
                 <td>4</td>
                 <td>5</td>
-                <td>6</td>
+                <td>6<br>
+                    <div class="red"></div>
+                </td>
                 <td>7</td>
                 <td>8</td>
                 <td>9</td>
@@ -505,12 +531,12 @@
         </tbody>
     </table>
 
-    <table class="cal" id="oct" style="z-index: 5;">
+    <table class="cal" id="oct">
         <thead>
             <tr class="monthInfo">
-                <td class="prev" onclick="prev();">◂</td>
+                <td class="prev" onclick="september();">◂</td>
                 <td class="month" colspan="5">2023년 10월</td>
-                <td class="next" onclick="next();">▸</td>
+                <td class="next" onclick="november();">▸</td>
             </tr>
             <tr class="dotw">
                 <td>일</td>
@@ -535,10 +561,18 @@
             <tr class="date">
                 <td>8</td>
                 <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
-                <td>13</td>
+                <td>10<br>
+                    <div class="red"></div>
+                </td>
+                <td>11<br>
+                    <div class="red"></div>
+                </td>
+                <td>12<br>
+                    <div class="red"></div>
+                </td>
+                <td>13<br>
+                    <div class="red"></div>
+                </td>
                 <td>14</td>
             </tr>
             <tr class="date">
@@ -571,12 +605,12 @@
         </tbody>
     </table>
 
-    <table class="cal" id="nov" style="z-index: 4;">
+    <table class="cal" id="nov">
         <thead>
             <tr class="monthInfo">
-                <td class="prev" onclick="prev();">◂</td>
+                <td class="prev" onclick="october();">◂</td>
                 <td class="month" colspan="5">2023년 11월</td>
-                <td class="next" onclick="next();">▸</td>
+                <td class="next" onclick="december();">▸</td>
             </tr>
             <tr class="dotw">
                 <td>일</td>
@@ -619,7 +653,9 @@
             <tr class="date">
                 <td>19</td>
                 <td>20</td>
-                <td>21</td>
+                <td>21<br>
+                    <div class="red"></div>
+                </td>
                 <td>22</td>
                 <td>23</td>
                 <td>24</td>
@@ -637,12 +673,12 @@
         </tbody>
     </table>
 
-    <table class="cal" id="dec" style="z-index: 3;">
+    <table class="cal" id="dec">
         <thead>
             <tr class="monthInfo">
-                <td class="prev" onclick="prev();">◂</td>
+                <td class="prev" onclick="november();">◂</td>
                 <td class="month" colspan="5">2023년 12월</td>
-                <td class="next" onclick="next();">▸</td>
+                <td class="next" onclick="january();">▸</td>
             </tr>
             <tr class="dotw">
                 <td>일</td>
@@ -669,15 +705,25 @@
                 <td>4</td>
                 <td>5</td>
                 <td>6</td>
-                <td>7</td>
-                <td>8</td>
+                <td>7<br>
+                    <div class="red"></div>
+                </td>
+                <td>8<br>
+                    <div class="red"></div>
+                </td>
                 <td>9</td>
             </tr>
             <tr class="date">
                 <td>10</td>
-                <td>11</td>
-                <td>12</td>
-                <td>13</td>
+                <td>11<br>
+                    <div class="red"></div>
+                </td>
+                <td>12<br>
+                    <div class="red"></div>
+                </td>
+                <td>13<br>
+                    <div class="red"></div>
+                </td>
                 <td>14</td>
                 <td>15</td>
                 <td>16</td>
@@ -712,12 +758,12 @@
         </tbody>
     </table>
 
-    <table class="cal" id="jan" style="z-index: 2;">
+    <table class="cal" id="jan">
         <thead>
             <tr class="monthInfo">
-                <td class="prev" onclick="prev();">◂</td>
+                <td class="prev" onclick="december();">◂</td>
                 <td class="month" colspan="5">2024년 1월</td>
-                <td class="next" onclick="next();">▸</td>
+                <td class="next" onclick="february();">▸</td>
                 <script src="./month.js"></script>
             </tr>
             <tr class="dotw">
@@ -779,12 +825,12 @@
         </tbody>
     </table>
 
-    <table class="cal" id="feb" style="z-index: 1;">
+    <table class="cal" id="feb">
         <thead>
             <tr class="monthInfo">
-                <td class="prev" onclick="prev();">◂</td>
+                <td class="prev" onclick="january();">◂</td>
                 <td class="month" colspan="5">2024년 2월</td>
-                <td class="next" onclick="next();">▸</td>
+                <td class="next">▸</td>
                 <script src="./month.js"></script>
             </tr>
             <tr class="dotw">

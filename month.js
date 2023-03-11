@@ -1,96 +1,48 @@
-function MarToApr() {
-    document.getElementById("mar").style.opacity = "0";
-    document.getElementById("apr").style.opacity = "1";
+function march() {
+    const mar = document.getElementById("mar");
+    mar.scrollIntoView();
 }
-function AprToMar() {
-    document.getElementById("mar").style.opacity = "1";
-    document.getElementById("apr").style.opacity = "0";
+function april() {
+    const apr = document.getElementById("apr");
+    apr.scrollIntoView();
 }
-function AprToMay() {
-    document.getElementById("apr").style.opacity = "0";
-    document.getElementById("may").style.opacity = "1";
+function may() {
+    const may = document.getElementById("may");
+    may.scrollIntoView();
 }
-function MayToApr() {
-    document.getElementById("apr").style.opacity = "1";
-    document.getElementById("may").style.opacity = "0";
+function june() {
+    const jun = document.getElementById("jun");
+    jun.scrollIntoView();
 }
-function MayToJun() {
-    document.getElementById("may").style.opacity = "0";
-    document.getElementById("jun").style.opacity = "1";
+function july() {
+    const jul = document.getElementById("jul");
+    jul.scrollIntoView();
 }
-function JunToMay() {
-    document.getElementById("may").style.opacity = "1";
-    document.getElementById("jun").style.opacity = "0";
+function august() {
+    const aug = document.getElementById("aug");
+    aug.scrollIntoView();
 }
-function JunToJul() {
-    document.getElementById("jun").style.opacity = "0";
-    document.getElementById("jul").style.opacity = "1";
+function september() {
+    const sep = document.getElementById("sep");
+    sep.scrollIntoView();
 }
-function JulToJun() {
-    document.getElementById("jun").style.opacity = "1";
-    document.getElementById("jul").style.opacity = "0";
+function october() {
+    const oct = document.getElementById("oct");
+    oct.scrollIntoView();
 }
-function JulToAug() {
-    document.getElementById("jul").style.opacity = "0";
-    document.getElementById("aug").style.opacity = "1";
+function november() {
+    const nov = document.getElementById("nov");
+    nov.scrollIntoView();
 }
-function AugToJul() {
-    document.getElementById("jul").style.opacity = "1";
-    document.getElementById("aug").style.opacity = "0";
+function december() {
+    const dec = document.getElementById("dec");
+    dec.scrollIntoView();
 }
-function AugToSep() {
-    document.getElementById("aug").style.opacity = "0";
-    document.getElementById("sep").style.opacity = "1";
+function january() {
+    const jan = document.getElementById("jan");
+    jan.scrollIntoView();
 }
-function SepToAug() {
-    document.getElementById("aug").style.opacity = "1";
-    document.getElementById("sep").style.opacity = "0";
-}
-function SepToOct() {
-    document.getElementById("sep").style.opacity = "0";
-    document.getElementById("oct").style.opacity = "1";
-}
-function OctToSep() {
-    document.getElementById("sep").style.opacity = "1";
-    document.getElementById("oct").style.opacity = "0";
-}
-function OctToNov() {
-    document.getElementById("oct").style.opacity = "0";
-    document.getElementById("nov").style.opacity = "1";
-}
-function NovToOct() {
-    document.getElementById("oct").style.opacity = "1";
-    document.getElementById("nov").style.opacity = "0";
-}
-function NovToDec() {
-    document.getElementById("nov").style.opacity = "0";
-    document.getElementById("dec").style.opacity = "1";
-}
-function DecToNov() {
-    document.getElementById("nov").style.opacity = "1";
-    document.getElementById("dec").style.opacity = "0";
-}
-function DecToJan() {
-    document.getElementById("dec").style.opacity = "0";
-    document.getElementById("jan").style.opacity = "1";
-}
-function JanToDec() {
-    document.getElementById("dec").style.opacity = "1";
-    document.getElementById("jan").style.opacity = "0";
-}
-function JanToFeb() {
-    document.getElementById("jan").style.opacity = "0";
-    document.getElementById("feb").style.opacity = "1";
-}
-function FebToJan() {
-    document.getElementById("jan").style.opacity = "1";
-    document.getElementById("feb").style.opacity = "0";
-}
-
-function prev() {
-    window.scrollTo({ left: ((console.log(scrollX)) - screen.width) });
-}
-
-function next() {
-    window.scrollTo({ left: ((console.log(scrollX)) + screen.width) });
+function february() {
+    const feb = document.getElementById("feb");
+    feb.scrollIntoView();
 }
