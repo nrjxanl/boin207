@@ -1,11 +1,4 @@
-@font-face {font-family: "Pretendard"; font-weight: 100; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-Thin.woff2);}
-@font-face {font-family: "Pretendard"; font-weight: 200; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-ExtraLight.woff2);}
-@font-face {font-family: "Pretendard"; font-weight: 300; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-Light.woff2);}
 @font-face {font-family: "Pretendard"; font-weight: 400; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-Regular.woff2);}
-@font-face {font-family: "Pretendard"; font-weight: 500; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-Medium.woff2);}
-@font-face {font-family: "Pretendard"; font-weight: 600; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-SemiBold.woff2);}
-@font-face {font-family: "Pretendard"; font-weight: 700; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-Bold.woff2);}
-@font-face {font-family: "Pretendard"; font-weight: 800; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-ExtraBold.woff2);}
 @font-face {font-family: "Pretendard"; font-weight: 900; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-Black.woff2);}
 
 * {font-family: 'Pretendard'; font-weight: 900; text-decoration: none; color: #000; -webkit-tap-highlight-color: #000; margin: 0; padding: 0;}
