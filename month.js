@@ -88,9 +88,9 @@ function FebToJan() {
 }
 
 function prev() {
-    window.scrollTo({ left: ((console.log(scrollX)) - screen.width) })
+    window.scrollTo({ left: ((console.log(scrollX)) - screen.width) });
 }
 
 function next() {
-    window.scrollTo({ left: ((console.log(scrollX)) + screen.width) })
+    window.scrollTo({ left: ((console.log(scrollX)) + screen.width) });
 }

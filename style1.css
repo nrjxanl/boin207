@@ -14,7 +14,7 @@ body {background: #fff; -ms-overflow-style: none; width: 1200vw; text-align: cen
 
 p.liveClock {width: 97vw; height: 6vw; font-size: 5vw; text-align: left; padding: 3vw 0 3vw 3vw; background: #fff; position: fixed; z-index: 13;}
 
-table.cal {width: 100vw; height: 120vw; text-align: left; background: #fff; display: inline-block;}
+table.cal {width: 100%; height: 120vw; text-align: left; background: #fff; display: inline-block;}
     
     thead {vertical-align: middle;}
         tr.monthInfo {text-align: center; height: 15vw;}
@@ -26,7 +26,7 @@ table.cal {width: 100vw; height: 120vw; text-align: left; background: #fff; disp
     
     tbody {vertical-align: top; font-size: 5vw;}
         tr.date {text-align: center; height: 18vw;}
-            tr.date td {font-weight: 400; width: calc(90vw/7);}
+            tr.date td {font-weight: 400; width: calc(100vw/7);}
                 tr.date td:nth-child(1) {color: #ff0000;}
                 tr.date td:nth-child(7) {color: #0072de;}
             td.prevMonth, td.nextMonth {opacity: 30%;}
@@ -36,5 +36,5 @@ table.cal {width: 100vw; height: 120vw; text-align: left; background: #fff; disp
             .blue {background: #0072de;}
             .gray {background: #808080;}
 
-    span.info {font-size: 2vw; width: 90vw; margin-left: 5vw;}
+    span.info {font-size: 2vw; width: 95vw; padding-left: 5vw;}
         p.info {display: inline-block; font-weight: 400;}
