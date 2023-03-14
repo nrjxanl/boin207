@@ -1,4 +1,5 @@
 @font-face {font-family: "Pretendard"; font-weight: 400; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-Regular.woff2);}
+@font-face {font-family: "Pretendard"; font-weight: 700; src: url(https://nrjxanl.github.io/sefcinfo/files/Pretendard-Bold.woff2);}
 @font-face {font-family: "Pretendard"; font-weight: 900; src: url(https://nrjxanl.github.io/boin207/files/Pretendard-Black.woff2);}
 
 * {font-family: 'Pretendard'; font-weight: 900; text-decoration: none; color: #000; -webkit-tap-highlight-color: #000; margin: 0; padding: 0;}
@@ -9,31 +10,37 @@ p.liveClock {width: 97vw; height: 6vw; font-size: 5vw; text-align: left; padding
 
 .cal {background: #fff; -ms-overflow-style: none; width: 100vw; height: 120vw; text-align: center; white-space: nowrap; overflow-x: hidden; overflow-y: hidden;}
 
-table.cal {width: 100vw; height: 120vw; text-align: left; background: #fff;}
+    table.cal {width: 100vw; height: 120vw; text-align: left; background: #fff;}
+        
+        thead {vertical-align: middle;}
+            tr.monthInfo {text-align: center; height: 15vw;}
+                td.prev {font-size: 7vw; padding-left: 5vw;}
+                td.month {font-size: 4vw;}
+                td.next {font-size: 7vw; padding-right: 5vw;}
+            tr.dotw {vertical-align: middle; height: 15vw; vertical-align: top;}
+                tr.dotw td {font-size: 4vw; text-align: center; font-weight: 400;}
+                tr.dotw td:nth-child(1) {padding-left: 5vw;}
+                tr.dotw td:nth-child(7) {padding-right: 5vw;}
+        
+        tbody {vertical-align: top; font-size: 5vw;}
+            tr.date {text-align: center; height: 18vw;}
+                tr.date td {font-weight: 400; width: calc(90vw/7);}
+                    tr.date td:nth-child(1) {color: #ff0000; padding-left: 5vw;}
+                    tr.date td:nth-child(7) {color: #0072de; padding-right: 5vw;}
+                td.prevMonth, td.nextMonth {opacity: 30%;}
     
-    thead {vertical-align: middle;}
-        tr.monthInfo {text-align: center; height: 15vw;}
-            td.prev {font-size: 7vw; padding-left: 5vw;}
-            td.month {font-size: 4vw;}
-            td.next {font-size: 7vw; padding-right: 5vw;}
-        tr.dotw {vertical-align: middle; height: 15vw; vertical-align: top;}
-            tr.dotw td {font-size: 4vw; text-align: center; font-weight: 400;}
-            tr.dotw td:nth-child(1) {padding-left: 5vw;}
-            tr.dotw td:nth-child(7) {padding-right: 5vw;}
+                #apr tr, #jul tr, #dec tr {height: 15vw;}
     
-    tbody {vertical-align: top; font-size: 5vw;}
-        tr.date {text-align: center; height: 18vw;}
-            tr.date td {font-weight: 400; width: calc(90vw/7);}
-                tr.date td:nth-child(1) {color: #ff0000; padding-left: 5vw;}
-                tr.date td:nth-child(7) {color: #0072de; padding-right: 5vw;}
-            td.prevMonth, td.nextMonth {opacity: 30%;}
-
-            #apr tr, #jul tr, #dec tr {height: 15vw;}
-
-            .red, .blue, .gray {width: 2vw; height: 1.9vw; border-radius: 100%; display: inline-block; margin-bottom: 2vw;}
-            .red {background: #ff0000;}
-            .blue {background: #0072de;}
-            .gray {background: #808080;}
-
-    span.info {font-size: 2vw; position: fixed; left: 7vw; top: 125vw;}
+                .red, .blue, .gray {width: 2vw; height: 1.9vw; border-radius: 100%; display: inline-block; margin-bottom: 2vw;}
+                .red {background: #ff0000;}
+                .blue {background: #0072de;}
+                .gray {background: #808080;}
+     
+    span.info {font-size: 2vw; left: 0; top: 125vw; padding-left: 10vw; position: absolute;}
         p.info {display: inline-block; font-weight: 400;}
+
+.schedule {width: 100vw; height: 3000vw; margin-top: 30vw;}
+    .skd {width: 100vw; height: 30vw; background: #fff; display: flex; margin-top: -10vw;}
+        .skdDate {width: 20vw; text-align: center; display: flex; flex-direction: column; padding-left: 5vw; padding-bottom: 5vw; font-size: 10vw;}
+            span.skdDateMonth {opacity: 70%; font-size: 2vw; margin: 1.5vw 0 -1.5vw 0;}
+        .sched {width: 55vw; height: min-content; padding: 5vw; text-align: left; background: #0072de; color: #fff; font-weight: 700; border-radius: 10px; font-size: 5vw;}
