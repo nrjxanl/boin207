@@ -3,11 +3,13 @@
 
 * {font-family: 'Pretendard'; font-weight: 900; text-decoration: none; color: #000; -webkit-tap-highlight-color: #000; margin: 0; padding: 0;}
 
-body {background: #fff; -ms-overflow-style: none; width: 1200vw; text-align: center; white-space: nowrap; overflow-x: hidden; overflow-y: hidden; display: flex;}
+body {background: #fff; -ms-overflow-style: none; width: 1200vw; text-align: center; white-space: nowrap; overflow-x: hidden; overflow-y: scroll;}
 
-p.liveClock {width: 97vw; height: 6vw; font-size: 5vw; text-align: left; padding: 3vw 0 3vw 3vw; background: #fff; position: fixed; z-index: 13;}
+p.liveClock {width: 97vw; height: 6vw; font-size: 5vw; text-align: left; padding: 3vw 0 3vw 3vw; background: #fff; z-index: 13;}
 
-table.cal {width: 100vw; height: 120vw; text-align: left; background: #fff; display: inline-block;}
+.cal {width: 100vw; height: 120vw; display: inline-block;}
+
+table.cal {width: 100vw; height: 120vw; text-align: left; background: #fff;}
     
     thead {vertical-align: middle;}
         tr.monthInfo {text-align: center; height: 15vw;}
