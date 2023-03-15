@@ -41,3 +41,12 @@ function mar3() {
 function mar6() {
     document.getElementById("mar6").scrollIntoView({behavior: "smooth"});
 }
+function mar10() {
+    document.getElementById("mar10").scrollIntoView({behavior: "smooth"});
+}
+function mar13() {
+    document.getElementById("mar13").scrollIntoView({behavior: "smooth"});
+}
+function mar14() {
+    document.getElementById("mar14").scrollIntoView({behavior: "smooth"});
+}

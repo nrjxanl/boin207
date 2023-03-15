@@ -17,14 +17,15 @@ p.liveClock {width: 97vw; height: 6vw; font-size: 5vw; text-align: left; padding
                 td.prev {font-size: 7vw; padding-left: 5vw;}
                 td.month {font-size: 4vw;}
                 td.next {font-size: 7vw; padding-right: 5vw;}
-            tr.dotw {vertical-align: middle; height: 15vw; vertical-align: top;}
+            tr.dotw {vertical-align: middle; height: 15vw;}
                 tr.dotw td {font-size: 4vw; text-align: center; font-weight: 400;}
                 tr.dotw td:nth-child(1) {padding-left: 5vw;}
                 tr.dotw td:nth-child(7) {padding-right: 5vw;}
         
         tbody {vertical-align: top; font-size: 5vw;}
             tr.date {text-align: center; height: 18vw;}
-                tr.date td {font-weight: 400; width: calc(90vw/7);}
+                tr.date td {font-weight: 400; width: calc(90vw/7); border-radius: 10px;}
+                    tr.date td:active {background: #00000010;}
                     tr.date td:nth-child(1) {color: #ff0000; padding-left: 5vw;}
                     tr.date td:nth-child(7) {color: #0072de; padding-right: 5vw;}
                 td.prevMonth, td.nextMonth {opacity: 30%;}
@@ -40,7 +41,9 @@ p.liveClock {width: 97vw; height: 6vw; font-size: 5vw; text-align: left; padding
         p.info {display: inline-block; font-weight: 400;}
 
 .schedule {width: 100vw; height: 3000vw; margin-top: 30vw;}
-    .skd {width: 100vw; height: 30vw; background: #fff; display: flex; margin-top: -10vw;}
+    .skd {width: 100vw; height: 30vw; background: none; display: flex; margin-top: -20vw; padding-top: 10vw;}
         .skdDate {width: 20vw; text-align: center; display: flex; flex-direction: column; padding-left: 5vw; padding-bottom: 5vw; font-size: 10vw;}
             span.skdDateMonth {opacity: 70%; font-size: 2vw; margin: 1.5vw 0 -1.5vw 0;}
-        .sched {width: 55vw; height: min-content; padding: 5vw; text-align: left; background: #0072de; color: #fff; font-weight: 700; border-radius: 10px; font-size: 5vw;}
+            .schedTest {width: 55vw; height: min-content; padding: 4vw 5vw; text-align: justify; background: #ff0000; color: #fff; font-weight: 700; border-radius: 10px; font-size: 4vw; word-break: keep-all; white-space: normal; line-height: 1.4;}
+            .schedEval {width: 55vw; height: min-content; padding: 4vw 5vw; text-align: justify; background: #0072de; color: #fff; font-weight: 700; border-radius: 10px; font-size: 4vw; word-break: keep-all; white-space: normal; line-height: 1.4;}
+            .schedEtc {width: 55vw; height: min-content; padding: 4vw 5vw; text-align: justify; background: #aaaaaa; color: #fff; font-weight: 700; border-radius: 10px; font-size: 4vw; word-break: keep-all; white-space: normal; line-height: 1.4;}
