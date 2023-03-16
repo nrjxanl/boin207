@@ -4,13 +4,13 @@
 
 * {font-family: 'Pretendard'; font-weight: 900; text-decoration: none; color: #000; -webkit-tap-highlight-color: #000; margin: 0; padding: 0;}
 
-body {background: #fff; height: 100%;}
+body {background: #fff; height: 100vh; height: -webkit-fill-available; height: fill-available; overflow: hidden;}
 
 p.liveClock {width: 97vw; height: 6vw; font-size: 5vw; text-align: left; padding: 3vw 0 3vw 3vw; background: #fff; z-index: 13;}
 
 .cal {background: #fff; -ms-overflow-style: none; width: 100vw; height: 50vh; text-align: center; white-space: nowrap; overflow-x: hidden; overflow-y: hidden;}
 
-    table.cal {width: 100vw; height: 50vh; text-align: left; background: #fff;}
+    table.cal {width: 100vw; height: 50vh; height: -webkit-fill-available; height: fill-available; text-align: left; background: #fff;}
         
         thead {vertical-align: middle;}
             tr.monthInfo {text-align: center; height: 5vh;}
@@ -40,7 +40,7 @@ p.liveClock {width: 97vw; height: 6vw; font-size: 5vw; text-align: left; padding
     span.info {font-size: 2vw; left: 0; top: 50vh; position: absolute; height: 5vh; background: #fff; width: 100vw;}
         p.info {display: inline-block; font-weight: 400;}
 
-.schedule {width: 100vw; height: 1000vw; position: absolute; top: 55vh;}
+.schedule {width: 100vw; height: 50vh; height: -webkit-fill-available; height: fill-available; position: absolute; top: 55vh; overflow: scroll;}
     .skd {width: 100vw; height: 30vw; background: none; display: flex; margin-bottom: -10vw;}
         .skdDate {width: 20vw; text-align: center; display: flex; flex-direction: column; padding-left: 5vw; padding-bottom: 5vw; font-size: 10vw;}
             span.skdDateMonth {opacity: 70%; font-size: 2vw; margin: .5vw 0 -1.5vw 0;}
