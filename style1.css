@@ -37,7 +37,7 @@ p.liveClock {width: 97vw; height: 6vw; font-size: 5vw; text-align: left; padding
                 .blue {background: #0072de;}
                 .gray {background: #808080;}
      
-    span.info {font-size: 2vw; left: 0; top: 50vh; position: absolute; height: 5vh; background: #fff; width: 100vw;}
+    span.info {font-size: 2vw; left: 0; top: 50vh; position: absolute; height: 5vh; height: -webkit-fill-available; height: fill-available; background: #fff; width: 100vw;}
         p.info {display: inline-block; font-weight: 400;}
 
 .schedule {width: 100vw; height: 50vh; height: -webkit-fill-available; height: fill-available; position: absolute; top: 55vh; overflow: scroll;}
