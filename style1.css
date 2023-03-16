@@ -47,3 +47,6 @@ p.liveClock {width: 97vw; height: 6vw; font-size: 5vw; text-align: left; padding
             .schedTest {width: 55vw; height: min-content; padding: 4vw 5vw; text-align: justify; background: #ff0000; color: #fff; font-weight: 700; border-radius: 10px; font-size: 4vw; word-break: keep-all; white-space: normal; line-height: 1.4;}
             .schedEval {width: 55vw; height: min-content; padding: 4vw 5vw; text-align: justify; background: #0072de; color: #fff; font-weight: 700; border-radius: 10px; font-size: 4vw; word-break: keep-all; white-space: normal; line-height: 1.4;}
             .schedEtc {width: 55vw; height: min-content; padding: 4vw 5vw; text-align: justify; background: #aaaaaa; color: #fff; font-weight: 700; border-radius: 10px; font-size: 4vw; word-break: keep-all; white-space: normal; line-height: 1.4;}
+
+button.top {width: 10vw; height: 10vw; border-radius: 100%; background-color: #0072de; position: fixed; right: 5vw; bottom: 5vw; border: none;}
+    button.top img {width: 8vw; height: auto; margin-top: 1vw; filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(67deg) brightness(107%) contrast(104%);}
