@@ -2,49 +2,52 @@
 @font-face {font-family: "Pretendard"; font-weight: 700; src: url(./files/Pretendard-Bold.woff2);}
 @font-face {font-family: "Pretendard"; font-weight: 900; src: url(./files/Pretendard-Black.woff2);}
 
-* {font-family: 'Pretendard'; font-weight: 900; text-decoration: none; color: #000; -webkit-tap-highlight-color: #000; margin: 0; padding: 0;}
+* {font-family: 'Pretendard'; font-weight: 900; text-decoration: none; color: #000; margin: 0; padding: 0;}
 
 body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow: hidden; margin: 0; padding: 0;}
 
-.cal {background: #fff; -ms-overflow-style: none; width: 100vw; height: calc(var(--vh, 1vh) * 55); text-align: center; white-space: nowrap; overflow-x: hidden; overflow-y: hidden;}
+    header {width: 100vw; height: calc(var(--vh, 1vh) * 3); text-align: center; padding-top: calc(var(--vh, 1vh) * 2);}
+        header a {margin: 0 3vw; font-weight: 700; text-decoration: none;}
 
-    table.cal {width: 100vw; text-align: left; background: #fff; border-spacing: unset; border-collapse: separate;}
-        
-        thead {vertical-align: middle;}
-            tr.monthInfo {text-align: center;}
-                tr.monthInfo td {height: calc(var(--vh, 1vh) * 5);}
-                td.prev {font-size: 7vw; padding-left: 5vw;}
-                td.month {font-size: 4vw;}
-                td.next {font-size: 7vw; padding-right: 5vw;}
-            tr.dotw {text-align: center; vertical-align: middle;}
-                tr.dotw td {font-size: 4vw; text-align: center; font-weight: 400; height: calc(var(--vh, 1vh) * 5);}
-                tr.dotw td:nth-child(1) {padding-left: 5vw;}
-                tr.dotw td:nth-child(7) {padding-right: 5vw;}
-        
-        tbody {vertical-align: top; font-size: 4.5vw;}
-            tr.date {text-align: center;}
-                tr.date td {font-weight: 400; width: calc(90vw/7); height: calc(var(--vh, 1vh) * 45 / 5); table-layout: fixed;}
-                    tr.date td:active {background: #00000010;}
-                    tr.date td:nth-child(1) {color: #ff0000; padding-left: 5vw;}
-                    tr.date td:nth-child(7) {color: #0072de; padding-right: 5vw;}
-                    p.dateName {font-size: 3vw; font-weight: 400; color: #ff0000;}
-                td.prevMonth, td.nextMonth {opacity: 30%;}
-    
-                #apr tbody tr td, #jul tbody tr td, #dec tbody tr td {height: calc(var(--vh, 1vh) * 45 / 6);}
-    
-                .red, .blue, .gray {width: 1.5vw; height: 1.5vw; border-radius: 100%; display: inline-block; margin-bottom: 2vw;}
-                .red {background: #ff0000;}
-                .blue {background: #0072de;}
-                .gray {background: #808080;}
+    .cal {background: #fff; -ms-overflow-style: none; width: 100vw; height: calc(var(--vh, 1vh) * 50); text-align: center; white-space: nowrap; overflow-x: hidden; overflow-y: hidden;}
 
-.schedule {width: 100vw; height: calc(var(--vh, 1vh) * 45); position: fixed; top: calc(var(--vh, 1vh) * 55); overflow: scroll;}
+        table.cal {width: 100vw; text-align: left; background: #fff; border-spacing: unset; border-collapse: separate;}
 
-    .skd {width: 100vw; height: 30vw; background: none; display: flex; margin-bottom: -10vw;}
-        .skdDate {width: 20vw; text-align: center; display: flex; flex-direction: column; padding-left: 5vw; padding-bottom: 5vw; font-size: 10vw;}
-            span.skdDateMonth {opacity: 70%; font-size: 2vw; margin: .5vw 0 -1.5vw 0;}
-            .schedTest {width: 55vw; height: min-content; padding: 4vw 5vw; text-align: justify; background: #ff0000; color: #fff; font-weight: 700; border-radius: 10px; font-size: 4vw; word-break: keep-all; white-space: normal; line-height: 1.4;}
-            .schedEval {width: 55vw; height: min-content; padding: 4vw 5vw; text-align: justify; background: #0072de; color: #fff; font-weight: 700; border-radius: 10px; font-size: 4vw; word-break: keep-all; white-space: normal; line-height: 1.4;}
-            .schedEtc {width: 55vw; height: min-content; padding: 4vw 5vw; text-align: justify; background: #aaaaaa; color: #fff; font-weight: 700; border-radius: 10px; font-size: 4vw; word-break: keep-all; white-space: normal; line-height: 1.4;}
+            thead {vertical-align: middle;}
+                tr.monthInfo {text-align: center;}
+                    tr.monthInfo td {height: calc(var(--vh, 1vh) * 5);}
+                    td.prev {font-size: 7vw; padding-left: 5vw;}
+                    td.month {font-size: 4vw;}
+                    td.next {font-size: 7vw; padding-right: 5vw;}
+                tr.dotw {text-align: center; vertical-align: middle;}
+                    tr.dotw td {font-size: 4vw; text-align: center; font-weight: 400; height: calc(var(--vh, 1vh) * 5);}
+                    tr.dotw td:nth-child(1) {padding-left: 5vw;}
+                    tr.dotw td:nth-child(7) {padding-right: 5vw;}
 
-button.top {width: 10vw; height: 10vw; border-radius: 100%; background-color: #0072de; position: fixed; right: 5vw; bottom: 5vw; border: none;}
-    button.top img {width: 8vw; height: auto; margin-top: 1vw; filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(67deg) brightness(107%) contrast(104%);}
+            tbody {vertical-align: top; font-size: 4.5vw;}
+                tr.date {text-align: center;}
+                    tr.date td {font-weight: 400; width: calc(90vw/7); height: calc(var(--vh, 1vh) * 40 / 5); table-layout: fixed; border-radius: 10px;}
+                        tr.date td:active, tr.date td:focus {background: #00000005;}
+                        tr.date td:nth-child(1) {color: #ff0000; padding-left: 5vw;}
+                        tr.date td:nth-child(7) {color: #0072de; padding-right: 5vw;}
+                        p.dateName {font-size: 3vw; font-weight: 400; color: #ff0000;}
+                    td.prevMonth, td.nextMonth {opacity: 30%;}
+
+                    #apr tbody tr td, #jul tbody tr td, #dec tbody tr td {height: calc(var(--vh, 1vh) * 40 / 6);}
+
+                    .red, .blue, .gray {width: 1.5vw; height: 1.5vw; border-radius: 100%; display: inline-block; margin-bottom: 2vw;}
+                    .red {background: #ff0000;}
+                    .blue {background: #0072de;}
+                    .gray {background: #808080;}
+
+    .schedule {width: 100vw; height: calc(var(--vh, 1vh) * 45); position: fixed; top: calc(var(--vh, 1vh) * 55); overflow: scroll;}
+
+        .skd {width: 100vw; height: 30vw; background: none; display: flex; margin-bottom: -10vw;}
+            .skdDate {width: 20vw; text-align: center; display: flex; flex-direction: column; padding-left: 5vw; padding-bottom: 5vw; font-size: 10vw;}
+                span.skdDateMonth {opacity: 70%; font-size: 2vw; margin: .5vw 0 -1.5vw 0;}
+                .schedTest {width: 55vw; height: min-content; padding: 4vw 5vw; text-align: justify; background: #ff0000; color: #fff; font-weight: 700; border-radius: 10px; font-size: 4vw; word-break: keep-all; white-space: normal; line-height: 1.4;}
+                .schedEval {width: 55vw; height: min-content; padding: 4vw 5vw; text-align: justify; background: #0072de; color: #fff; font-weight: 700; border-radius: 10px; font-size: 4vw; word-break: keep-all; white-space: normal; line-height: 1.4;}
+                .schedEtc {width: 55vw; height: min-content; padding: 4vw 5vw; text-align: justify; background: #aaaaaa; color: #fff; font-weight: 700; border-radius: 10px; font-size: 4vw; word-break: keep-all; white-space: normal; line-height: 1.4;}
+
+    button.top {width: 10vw; height: 10vw; border-radius: 100%; background-color: #0072de; position: fixed; right: 5vw; bottom: 5vw; border: none;}
+        button.top img {width: 8vw; height: auto; margin-top: 1vw; filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(67deg) brightness(107%) contrast(104%);}
