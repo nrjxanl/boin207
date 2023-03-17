@@ -52,3 +52,14 @@ body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow: hidden; ma
 
     button.top {width: 40px; height: 40px; border-radius: 100%; background-color: #0072de; position: fixed; right: 5vw; bottom: 5vw; border: none;}
         button.top img {width: 30px; height: auto; margin-top: 5px; filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(67deg) brightness(107%) contrast(104%);}
+
+
+table.timetable {width: 50vw; height: calc(var(--vh, 1vh) * 40); margin-left: 25vw; margin-top: calc(var(--vh, 1vh) * 2); text-align: center;}
+    
+    table.timetable thead {height: calc(var(--vh, 1vh) * 5); font-size: 15px; vertical-align: middle;}
+        table.timetable thead tr td {font-weight: 700;}
+        span#today, span#tomorrow {font-size: 80%; font-weight: 400; margin-left: 5px;}
+    
+    table.timetable tbody {font-size: 15px; vertical-align: middle;}
+        table.timetable tbody tr td {font-weight: 400; height: calc(var(--vh, 1vh) * 35 / 7);}
+        span.classT {font-weight: 400; font-size: 80%; margin-left: 5px;}

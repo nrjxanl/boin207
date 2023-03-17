@@ -12,6 +12,23 @@ window.addEventListener('resize', () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 })
 
+date = new Date();
+month = date.getMonth() + 1;
+day = date.getDate();
+dotw = date.getDay();
+
+tomorrow = 1;
+date.setDate(date.getDate() + tomorrow );
+
+monthTomorrow = ((date.getMonth() + 1 ));
+dayTomorrow = (date.getDate());
+
+window.onload = function() {
+    document.getElementById("today").innerHTML = month + "월 " + day + "일";
+    document.getElementById("tomorrow").innerHTML = monthTomorrow + "월 " + dayTomorrow + "일";
+}
+
+
 function march() {
     document.getElementById("mar").scrollIntoView();
 }
