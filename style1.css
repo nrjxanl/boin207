@@ -58,8 +58,12 @@ table.timetable {width: 50vw; height: calc(var(--vh, 1vh) * 40); margin-left: 25
     
     table.timetable thead {height: calc(var(--vh, 1vh) * 5); font-size: 15px; vertical-align: middle;}
         table.timetable thead tr td {font-weight: 700;}
-        span#today, span#tomorrow {font-size: 80%; font-weight: 400; margin-left: 5px;}
+        #today, #tomorrow {font-size: 80%; font-weight: 400; margin-left: 5px;}
     
     table.timetable tbody {font-size: 15px; vertical-align: middle;}
-        table.timetable tbody tr td {font-weight: 400; height: calc(var(--vh, 1vh) * 35 / 7);}
+        table.timetable tbody tr td {height: calc(var(--vh, 1vh) * 35 / 7); font-weight: 400;}
+            table.timetable tbody tr td:nth-child(1) {width: 15vw;}
+            table.timetable tbody tr td:nth-child(2) {width: 35vw;}
+
+        span.classS {font-weight: 400;}
         span.classT {font-weight: 400; font-size: 80%; margin-left: 5px;}

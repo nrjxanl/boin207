@@ -15,12 +15,12 @@
     <header>
         <a class="menuCal" href="./calendar">일정</a>
         <a class="menuTable" href="./timetable" style="border-bottom: 3px solid #0072de; color: #0072de;">시간표</a>
-        <a class="menuKakao" href="./kakao">카카오 채널</a>
+        <a class="menuKakao" href="https://pf.kakao.com/_BKavxj#post">카카오 채널</a>
     </header>
 
     <script src="./script.js"></script>
     
-    <table class="timetable">
+    <table class="timetable" id="tableToday">
         <thead>
             <tr>
                 <td colspan="2">오늘의 시간표<span id="today"></span></td>
@@ -29,35 +29,35 @@
         <tbody>
             <tr>
                 <td>1교시</td>
-                <td>기하<span class="classT">김보성</span></td>
+                <td><span class="classS" id="s1"></span><span class="classT" id="t1"></span></td>
             </tr>
             <tr>
                 <td>2교시</td>
-                <td>미술<span class="classT">권아인</span></td>
+                <td><span class="classS" id="s2"></span><span class="classT" id="t2"></span></td>
             </tr>
             <tr>
                 <td>3교시</td>
-                <td>물리학 I<span class="classT">장종목</span></td>
+                <td><span class="classS" id="s3"></span><span class="classT" id="t3"></span></td>
             </tr>
             <tr>
                 <td>4교시</td>
-                <td>진로<span class="classT">백기곤</span></td>
+                <td><span class="classS" id="s4"></span><span class="classT" id="t4"></span></td>
             </tr>
             <tr>
                 <td>5교시</td>
-                <td>사회문제탐구<span class="classT">양승범</span></td>
+                <td><span class="classS" id="s5"></span><span class="classT" id="t5"></span></td>
             </tr>
             <tr>
                 <td>6교시</td>
-                <td>문학<span class="classT">류신형</span></td>
+                <td><span class="classS" id="s6"></span><span class="classT" id="t6"></span></td>
             </tr>
             <tr>
                 <td>7교시</td>
-                <td>수학 I<span class="classT">조재희</span></td>
+                <td><span class="classS" id="s7"></span><span class="classT" id="t7"></span></td>
             </tr>
         </tbody>
     </table>
-    <table class="timetable">
+    <table class="timetable" id="tableTomorrow">
         <thead>
             <tr>
                 <td colspan="2">내일의 시간표<span id="tomorrow"></span></td>
@@ -66,31 +66,31 @@
         <tbody>
             <tr>
                 <td>1교시</td>
-                <td>문학<span class="classT">이하은</span></td>
+                <td><span class="classS" id="s1t"></span><span class="classT" id="t1t"></span></td>
             </tr>
             <tr>
                 <td>2교시</td>
-                <td>화학 I<span class="classT">이은주</span></td>
+                <td><span class="classS" id="s2t"></span><span class="classT" id="t2t"></span></td>
             </tr>
             <tr>
                 <td>3교시</td>
-                <td>수학 I<span class="classT">조재희</span></td>
+                <td><span class="classS" id="s3t"></span><span class="classT" id="t3t"></span></td>
             </tr>
             <tr>
                 <td>4교시</td>
-                <td>영어<span class="classT">백기곤</span></td>
+                <td><span class="classS" id="s4t"></span><span class="classT" id="t4t"></span></td>
             </tr>
             <tr>
                 <td>5교시</td>
-                <td>언어와 매체<span class="classT">강이욱</span></td>
+                <td><span class="classS" id="s5t"></span><span class="classT" id="t5t"></span></td>
             </tr>
             <tr>
                 <td>6교시</td>
-                <td>사회문제탐구<span class="classT">서정민</span></td>
+                <td><span class="classS" id="s6t"></span><span class="classT" id="t6t"></span></td>
             </tr>
             <tr>
                 <td>7교시</td>
-                <td>지구과학 I<span class="classT">전아림</span></td>
+                <td><span class="classS" id="s7t"></span><span class="classT" id="t7t"></span></td>
             </tr>
         </tbody>
     </table>
