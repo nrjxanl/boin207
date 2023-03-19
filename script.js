@@ -1,10 +1,9 @@
-// 새로고침 시 맨 위로
 window.onload = function() {
-    setTimeout (function () {
-    scrollTo(0,0);
+    setTimeout (function() {
+        top = document.getElementById('mar17');
+        top.scrollIntoView();
     }, 100);
 }
-
 
 
 // vh값 정의
@@ -33,7 +32,7 @@ monthTomorrow = ((date.getMonth() + 1));
 dayTomorrow = (date.getDate());
 dotwKRTomorrow = (week[date.getDay()]);
 
-if(dotw = 0) {
+if (dotw = [0]) {
     s1 = '-';
     t1 = '';
     s2 = '-';
@@ -62,7 +61,7 @@ if(dotw = 0) {
     t6t = '류신형';
     s7t = '수학 I';
     t7t = '조재희';
-} else if(dotw = 1) {
+} else if (dotw = [1]) {
     s1 = '기하';
     t1 = '김보성';
     s2 = '미술';
@@ -91,7 +90,7 @@ if(dotw = 0) {
     t6t = '서정민';
     s7t = '지구과학 I';
     t7t = '전아림';
-} else if(dotw = 2) {
+} else if (dotw = [2]) {
     s1 = '문학';
     t1 = '이하은';
     s2 = '화학 I';
@@ -120,7 +119,7 @@ if(dotw = 0) {
     t6t = '김보성';
     s7t = '일본어 I';
     t7t = '양혜리';
-} else if(dotw = 3) {
+} else if (dotw = [3]) {
     s1 = '물리학 I';
     t1 = '장종목';
     s2 = '화학 I';
@@ -149,7 +148,7 @@ if(dotw = 0) {
     t6t = '강이욱';
     s7t = '문학';
     t7t = '이하은';
-} else if(dotw = 4) {
+} else if (dotw = [4]) {
     s1 = '일본어 I';
     t1 = '양혜리';
     s2 = '물리학 I';
@@ -178,7 +177,7 @@ if(dotw = 0) {
     t6t = '';
     s7t = '';
     t7t = '-';
-} else if(dotw = 5) {
+} else if (dotw = [5]) {
     s1 = '지구과학 I';
     t1 = '김태식';
     s2 = '영어 I';
@@ -207,7 +206,7 @@ if(dotw = 0) {
     t6t = '';
     s7t = '-';
     t7t = '';
-} else (dotw = 6); {
+} else {
     s1 = '-';
     t1 = '';
     s2 = '-';
@@ -311,6 +310,8 @@ function february() {
 }
 
 
+
+// 일정으로 이동
 function mar3() {
     document.getElementById('mar3').scrollIntoView({behavior: 'smooth'});
 }
@@ -329,8 +330,23 @@ function mar14() {
 function mar16() {
     document.getElementById('mar16').scrollIntoView({behavior: 'smooth'});
 }
+function mar20() {
+    document.getElementById('mar20').scrollIntoView({behavior: 'smooth'});
+}
 function mar23() {
     document.getElementById('mar23').scrollIntoView({behavior: 'smooth'});
+}
+function mar27() {
+    document.getElementById('mar27').scrollIntoView({behavior: 'smooth'});
+}
+function apr3() {
+    document.getElementById('apr3').scrollIntoView({behavior: 'smooth'});
+}
+function apr10() {
+    document.getElementById('apr10').scrollIntoView({behavior: 'smooth'});
+}
+function apr17() {
+    document.getElementById('apr17').scrollIntoView({behavior: 'smooth'});
 }
 function apr28() {
     document.getElementById('apr28').scrollIntoView({behavior: 'smooth'});
