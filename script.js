@@ -1,11 +1,3 @@
-window.onload = function() {
-    setTimeout (function() {
-        top = document.getElementById('mar17');
-        top.scrollIntoView();
-    }, 100);
-}
-
-
 // vh값 정의
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
