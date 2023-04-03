@@ -9,7 +9,7 @@ body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow: hidden; ma
     header {width: 50vw; height: calc(var(--vh, 1vh) * 5.5); text-align: center; padding-top: calc(var(--vh, 1vh) * 4.5); font-size: 15px; padding-left: 5vw;}
         header a {margin: 0 3vw; font-weight: 700; text-decoration: none;}
 
-    .cal {background: #fff; -ms-overflow-style: none; width: 50vw; height: calc(var(--vh, 1vh) * 90); text-align: center; white-space: nowrap; overflow-x: hidden; overflow-y: hidden; padding-left: 5vw;}
+    .cal {background: #fff; -ms-overflow-style: none; width: 50vw; height: calc(var(--vh, 1vh) * 80); text-align: center; white-space: nowrap; overflow-x: hidden; overflow-y: hidden; padding-left: 5vw;}
 
         table.cal {width: 50vw; text-align: left; background: #fff; border-spacing: unset; border-collapse: separate; padding: 0;}
 
@@ -26,14 +26,14 @@ body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow: hidden; ma
 
             tbody {vertical-align: top; font-size: 20px;}
                 tr.date {text-align: center;}
-                    tr.date td {font-weight: 400; width: calc(40vw/7); height: calc(var(--vh, 1vh) * 80 / 5); table-layout: fixed; border-radius: 10px;}
+                    tr.date td {font-weight: 400; width: calc(40vw/7); height: calc(var(--vh, 1vh) * 70 / 5); table-layout: fixed; border-radius: 10px;}
                         tr.date td:active, tr.date td:focus {background: #00000005;}
                         tr.date td:nth-child(1) {color: #ff0000; padding-left: 5vw;}
                         tr.date td:nth-child(7) {color: #0072de; padding-right: 5vw;}
                         p.dateName {font-size: 12px; font-weight: 400; color: #ff0000;}
                     td.prevMonth, td.nextMonth {opacity: 30%;}
 
-                    #apr tbody tr td, #jul tbody tr td, #dec tbody tr td {height: calc(var(--vh, 1vh) * 80 / 6);}
+                    #apr tbody tr td, #jul tbody tr td, #dec tbody tr td {height: calc(var(--vh, 1vh) * 70 / 6);}
 
                     .red, .blue, .gray {width: 8px; height: 8px; border-radius: 100%; display: inline-block; margin-bottom: 10px;}
                     .red {background: #ff0000;}
@@ -43,7 +43,7 @@ body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow: hidden; ma
                     .dgbl {background: blueviolet; width: auto; height: 15px; border-radius: 7.5px; margin-bottom: 10px; font-size: 12px; color: #fff; font-weight: 700; letter-spacing: .5px; text-align: center;}
                     .bkbl {background: orange; width: auto; height: 15px; border-radius: 7.5px; margin-bottom: 10px; font-size: 12px; color: #fff; font-weight: 700; letter-spacing: .5px; text-align: center;}
 
-    .schedule {width: 50vw; height: calc(var(--vh, 1vh) * 80); position: fixed; top: calc(var(--vh, 1vh) * 15); left: 50vw; overflow: scroll;}
+    .schedule {width: 50vw; height: calc(var(--vh, 1vh) * 70); position: fixed; top: calc(var(--vh, 1vh) * 15); left: 50vw; overflow: scroll;}
 
         .skd {width: 50vw; height: 100px; background: none; display: flex; margin-bottom: -30px;}
         .skdDup {width: 50vw; height: 100px; background: none; display: flex; margin-bottom: -45px;}
