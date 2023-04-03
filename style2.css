@@ -39,6 +39,9 @@ body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow: hidden; ma
                     .red {background: #ff0000;}
                     .blue {background: #0072de;}
                     .gray {background: #808080;}
+                    .ftbl {background: #00985f; width: auto; height: 15px; border-radius: 7.5px; margin-bottom: 10px; font-size: 12px; color: #fff; font-weight: 700; letter-spacing: .5px; text-align: center;}
+                    .dgbl {background: blueviolet; width: auto; height: 15px; border-radius: 7.5px; margin-bottom: 10px; font-size: 12px; color: #fff; font-weight: 700; letter-spacing: .5px; text-align: center;}
+                    .bkbl {background: orange; width: auto; height: 15px; border-radius: 7.5px; margin-bottom: 10px; font-size: 12px; color: #fff; font-weight: 700; letter-spacing: .5px; text-align: center;}
 
     .schedule {width: 50vw; height: calc(var(--vh, 1vh) * 80); position: fixed; top: calc(var(--vh, 1vh) * 15); left: 50vw; overflow: scroll;}
 

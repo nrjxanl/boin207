@@ -36,9 +36,12 @@ body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow: hidden; ma
                     #apr tbody tr td, #jul tbody tr td, #dec tbody tr td {height: calc(var(--vh, 1vh) * 40 / 6);}
 
                     .red, .blue, .gray {width: 8px; height: 8px; border-radius: 100%; display: inline-block; margin-bottom: 10px;}
-                    .red {background: #ff0000;}
+                    .red {background: red;}
                     .blue {background: #0072de;}
-                    .gray {background: #808080;}
+                    .gray {background: gray;}
+                    .ftbl {background: #00985f; width: auto; height: 15px; border-radius: 7.5px; margin-bottom: 10px; font-size: 12px; color: #fff; font-weight: 700; letter-spacing: .5px; text-align: center;}
+                    .dgbl {background: blueviolet; width: auto; height: 15px; border-radius: 7.5px; margin-bottom: 10px; font-size: 12px; color: #fff; font-weight: 700; letter-spacing: .5px; text-align: center;}
+                    .bkbl {background: orange; width: auto; height: 15px; border-radius: 7.5px; margin-bottom: 10px; font-size: 12px; color: #fff; font-weight: 700; letter-spacing: .5px; text-align: center;}
 
     .schedule {width: 100vw; height: calc(var(--vh, 1vh) * 45); position: fixed; top: calc(var(--vh, 1vh) * 55); overflow: scroll;}
 

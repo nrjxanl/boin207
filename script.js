@@ -1,3 +1,7 @@
+
+
+
+
 // vh값 정의
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -6,7 +10,6 @@ window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 })
-
 
 
 // 시간표 불러오기
@@ -230,37 +233,41 @@ if (dotw = 0) {
 }
 
 window.onload = function() {
-    document.getElementById('today').innerHTML = month + '월 ' + day + '일 ' + dotwKR + '요일';
-    document.getElementById('tomorrow').innerHTML = monthTomorrow + '월 ' + dayTomorrow + '일 ' + dotwKRTomorrow + '요일';
-    document.getElementById('s1').innerHTML = s1;
-    document.getElementById('t1').innerHTML = t1;
-    document.getElementById('s2').innerHTML = s2;
-    document.getElementById('t2').innerHTML = t2;
-    document.getElementById('s3').innerHTML = s3;
-    document.getElementById('t3').innerHTML = t3;
-    document.getElementById('s4').innerHTML = s4;
-    document.getElementById('t4').innerHTML = t4;
-    document.getElementById('s5').innerHTML = s5;
-    document.getElementById('t5').innerHTML = t5;
-    document.getElementById('s6').innerHTML = s6;
-    document.getElementById('t6').innerHTML = t6;
-    document.getElementById('s7').innerHTML = s7;
-    document.getElementById('t7').innerHTML = t7;
-    document.getElementById('s1t').innerHTML = s1t;
-    document.getElementById('t1t').innerHTML = t1t;
-    document.getElementById('s2t').innerHTML = s2t;
-    document.getElementById('t2t').innerHTML = t2t;
-    document.getElementById('s3t').innerHTML = s3t;
-    document.getElementById('t3t').innerHTML = t3t;
-    document.getElementById('s4t').innerHTML = s4t;
-    document.getElementById('t4t').innerHTML = t4t;
-    document.getElementById('s5t').innerHTML = s5t;
-    document.getElementById('t5t').innerHTML = t5t;
-    document.getElementById('s6t').innerHTML = s6t;
-    document.getElementById('t6t').innerHTML = t6t;
-    document.getElementById('s7t').innerHTML = s7t;
+    document.getElementById('today').innerHTML = month + '월 ' + day + '일 ' + dotwKR + '요일',
+    document.getElementById('tomorrow').innerHTML = monthTomorrow + '월 ' + dayTomorrow + '일 ' + dotwKRTomorrow + '요일',
+    document.getElementById('s1').innerHTML = s1,
+    document.getElementById('t1').innerHTML = t1,
+    document.getElementById('s2').innerHTML = s2,
+    document.getElementById('t2').innerHTML = t2,
+    document.getElementById('s3').innerHTML = s3,
+    document.getElementById('t3').innerHTML = t3,
+    document.getElementById('s4').innerHTML = s4,
+    document.getElementById('t4').innerHTML = t4,
+    document.getElementById('s5').innerHTML = s5,
+    document.getElementById('t5').innerHTML = t5,
+    document.getElementById('s6').innerHTML = s6,
+    document.getElementById('t6').innerHTML = t6,
+    document.getElementById('s7').innerHTML = s7,
+    document.getElementById('t7').innerHTML = t7,
+    document.getElementById('s1t').innerHTML = s1t,
+    document.getElementById('t1t').innerHTML = t1t,
+    document.getElementById('s2t').innerHTML = s2t,
+    document.getElementById('t2t').innerHTML = t2t,
+    document.getElementById('s3t').innerHTML = s3t,
+    document.getElementById('t3t').innerHTML = t3t,
+    document.getElementById('s4t').innerHTML = s4t,
+    document.getElementById('t4t').innerHTML = t4t,
+    document.getElementById('s5t').innerHTML = s5t,
+    document.getElementById('t5t').innerHTML = t5t,
+    document.getElementById('s6t').innerHTML = s6t,
+    document.getElementById('t6t').innerHTML = t6t,
+    document.getElementById('s7t').innerHTML = s7t,
     document.getElementById('t7t').innerHTML = t7t;
 }
+
+window.addEventListener('load', function() {
+    document.getElementById('apr5').scrollIntoView({behavior: "smooth"});
+});
 
 
 // 달력
@@ -331,11 +338,23 @@ function mar23() {
 function mar27() {
     document.getElementById('mar27').scrollIntoView({behavior: 'smooth'});
 }
+function mar31() {
+    document.getElementById('mar31').scrollIntoView({behavior: 'smooth'});
+}
 function apr3() {
     document.getElementById('apr3').scrollIntoView({behavior: 'smooth'});
 }
+function apr5() {
+    document.getElementById('apr5').scrollIntoView({behavior: 'smooth'});
+}
+function apr7() {
+    document.getElementById('apr7').scrollIntoView({behavior: 'smooth'});
+}
 function apr10() {
     document.getElementById('apr10').scrollIntoView({behavior: 'smooth'});
+}
+function apr13() {
+    document.getElementById('apr13').scrollIntoView({behavior: 'smooth'});
 }
 function apr17() {
     document.getElementById('apr17').scrollIntoView({behavior: 'smooth'});
