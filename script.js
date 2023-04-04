@@ -353,6 +353,9 @@ function apr7() {
 function apr10() {
     document.getElementById('apr10').scrollIntoView({behavior: 'smooth'});
 }
+function apr12() {
+    document.getElementById('apr12').scrollIntoView({behavior: 'smooth'});
+}
 function apr13() {
     document.getElementById('apr13').scrollIntoView({behavior: 'smooth'});
 }
