@@ -6,7 +6,7 @@
 
 body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow: hidden; margin: 0; padding: 0;}
 
-    header {width: 50vw; height: calc(var(--vh, 1vh) * 5.5); text-align: center; padding-top: calc(var(--vh, 1vh) * 4.5); font-size: 15px; padding-left: 5vw;}
+    header {width: 100vw; height: calc(var(--vh, 1vh) * 5.5); text-align: center; padding-top: calc(var(--vh, 1vh) * 4.5); font-size: 15px;}
         header a {margin: 0 3vw; font-weight: 700; text-decoration: none;}
 
     .cal {background: #fff; -ms-overflow-style: none; width: 50vw; height: calc(var(--vh, 1vh) * 80); text-align: center; white-space: nowrap; overflow-x: hidden; overflow-y: hidden; padding-left: 5vw;}
@@ -56,18 +56,18 @@ body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow: hidden; ma
     button.top {width: 40px; height: 40px; border-radius: 100%; background-color: #0072de; position: fixed; right: 5vw; bottom: 5vw; border: none;}
         button.top img {width: 30px; height: auto; margin-top: 5px; filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(67deg) brightness(107%) contrast(104%);}
 
-table.timetable {width: 40vw; height: calc(var(--vh, 1vh) * 40); margin-left: 25vw; margin-top: calc(var(--vh, 1vh) * 2); text-align: center;}
+table.timetable {width: 20vw; height: calc(var(--vh, 1vh) * 60); margin-left: 40vw; margin-top: calc(var(--vh, 1vh) * 2); text-align: center; display: none;}
     #tableToday {position: absolute; top: calc(var(--vh, 1vh) * 10); left: calc(20vw / 3); margin: 0;}
     #tableTomorrow {position: absolute; top: calc(var(--vh, 1vh) * 10); left: calc((20vw / 3 * 2) + 40vw); margin: 0;}
 
-    table.timetable thead {height: calc(var(--vh, 1vh) * 5); font-size: 15px; vertical-align: middle;}
-        table.timetable thead tr td {font-weight: 700;}
-        #today, #tomorrow {font-size: 80%; font-weight: 400; margin-left: 5px;}
+    .timetable {font-size: 18px; vertical-align: middle; width: 100vw; text-align: center; margin-top: 5vh;}
+        .timetable span {font-weight: 700;}
+        #today {font-size: 80%; font-weight: 400; margin-left: 5px;}
 
     table.timetable tbody {font-size: 15px; vertical-align: middle;}
-        table.timetable tbody tr td {height: calc(var(--vh, 1vh) * 35 / 7); font-weight: 400;}
-            table.timetable tbody tr td:nth-child(1) {width: 12vw;}
-            table.timetable tbody tr td:nth-child(2) {width: 28vw;}
+        table.timetable tbody tr td {height: calc(var(--vh, 1vh) * 60 / 7); font-weight: 400;}
+            table.timetable tbody tr td:nth-child(1) {width: 5vw;}
+            table.timetable tbody tr td:nth-child(2) {width: 15vw;}
         
-        span.classS {font-weight: 400;}
-        span.classT {font-weight: 400; font-size: 80%; margin-left: 5px;}
+        span.subject {font-weight: 400;}
+        span.teacher {font-weight: 400; font-size: 80%; margin-left: 5px;}

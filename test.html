@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="assets/styles/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>Vanilla Coding | Bootcamp Prep</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="content-wrap">
+            <div class="content-left">
+                <div class="main-wrap">
+                    <div id="main-day" class="main-day"></div>
+                    <div id="main-date" class="main-date"></div>
+                </div>
+                <div class="todo-wrap">
+                    <div class="todo-title">Todo List</div>
+                    <div class="input-wrap">
+                        <input type="text" placeholder="please write here!!" id="input-box" class="input-box">
+                        <button type="button" id="input-data" class="input-data">INPUT</button>
+                        <div id="input-list" class="input-list"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-right">
+                <table id="calendar" text-align="center">
+                    <thead>
+                        <tr class="btn-wrap clearfix">
+                            <td>
+                                <label id="prev">
+                                    &#60;
+                                </label>
+                            </td>
+                            <td text-align="center" id="current-year-month" colspan="5"></td>
+                            <td>
+                                <label id="next">
+                                    &#62;
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sun" text-align="center">일요일</td>
+                            <td text-align="center">월요일</td>
+                            <td text-align="center">화요일</td>
+                            <td text-align="center">수요일</td>
+                            <td text-align="center">목요일</td>
+                            <td text-align="center">금요일</td>
+                            <td class="sat" text-align="center">토요일</td>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body" class="calendar-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    // 현재 연월
+    var currentTitle = document.getElementById('current-year-month');
+
+    // 달력 body
+    var calendarBody = document.getElementById('calendar-body');
+
+    // 오늘 날짜
+    var today = new Date();
+
+    // 이달 1일
+    var first = new Date(today.getFullYear(), today.getMonth(), 1);
+
+    // 요일
+    var dayList = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+
+    // 월
+    var monthList = ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'];
+
+    // 월별 말일(윤년)
+    var leapYear = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+    // 월별 말일(평년)
+    var notLeapYear = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+    // 첫 주
+    var pageFirst = first;
+
+    // 윤년 여부에 따른 월별 말일
+    var pageYear;
+    if (first.getFullYear() % 4 === 0) {
+        pageYear = leapYear;
+    } else {
+        pageYear = notLeapYear;
+    }
+
+    // 달력 생성
+    function showCalendar() {
+
+        // tr id
+        let monthCnt = 100;
+
+        // td id
+        let cnt = 1;
+
+        // 주(week) 생성 - for문 6회 실행(1~6주)
+        for (var i = 0; i < 6; i++) {
+
+            // for문에 따라 tr 생성
+            var $tr = document.createElement('tr');
+
+            // 각 tr에 id 부여(100~106)
+            $tr.setAttribute('id', monthCnt);
+
+            // 일(day) 생성 - for문 7회 실행(1~7주)
+            for (var j = 0; j < 7; j++) {
+
+                // 이달 1일이 일요일이 아닐 때 혹은 말일이 토요일이 아닐 때(= 1일 앞 또는 말일 뒤에 공간이 남을 때)
+                if ((i === 0 && j < first.getDay()) || cnt > pageYear[first.getMonth()]) {
+
+                    // td 생성
+                    var $td = document.createElement('td');
+
+                    // tr 내부에 td 생성
+                    $tr.appendChild($td);
+                } else {
+
+                    // td 생성
+                    var $td = document.createElement('td');
+
+                    // 각 td에 날짜 채우기(cnt값과 동일)
+                    $td.textContent = cnt;
+
+                    // 각 td에 id 부여(날짜와 동일)
+                    $td.setAttribute('id', cnt);
+
+                    // tr 내부에 td 생성
+                    $tr.appendChild($td);
+
+                    // cnt값 날짜에 따라 점진적 증가
+                    cnt++;
+                }
+            }
+
+            // 월(month) 점진적 증가
+            monthCnt++;
+
+            // calendarBody 내부에 tr 생성
+            calendarBody.appendChild($tr);
+        }
+    }
+
+    // 달력 출력
+    showCalendar();
+
+    function removeCalendar() {
+        let catchTr = 100;
+        for (var i = 100; i < 106; i++) {
+            var $tr = document.getElementById(catchTr);
+            $tr.remove();
+            catchTr++;
+        }
+    }
+
+    // 이전 달 이동
+    function prev() {
+        inputBox.value = "";
+        const $divs = document.querySelectorAll('#input-list > div');
+        $divs.forEach(function (e) {
+            e.remove();
+        });
+        const $btns = document.querySelectorAll('#input-list > button');
+        $btns.forEach(function (e1) {
+            e1.remove();
+        });
+        if (pageFirst.getMonth() === 1) {
+            pageFirst = new Date(first.getFullYear() - 1, 12, 1);
+            first = pageFirst;
+            if (first.getFullYear() % 4 === 0) {
+                pageYear = leapYear;
+            } else {
+                pageYear = notLeapYear;
+            }
+        } else {
+            pageFirst = new Date(first.getFullYear(), first.getMonth() - 1, 1);
+            first = pageFirst;
+        }
+        today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+        currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;' + first.getFullYear();
+        removeCalendar();
+        showCalendar();
+        showMain();
+        clickedDate1 = document.getElementById(today.getDate());
+        clickedDate1.classList.add('active');
+        clickStart();
+        reshowingList();
+    }
+
+    function next() {
+        inputBox.value = "";
+        const $divs = document.querySelectorAll('#input-list > div');
+        $divs.forEach(function (e) {
+            e.remove();
+        });
+        const $btns = document.querySelectorAll('#input-list > button');
+        $btns.forEach(function (e1) {
+            e1.remove();
+        });
+        if (pageFirst.getMonth() === 12) {
+            pageFirst = new Date(first.getFullYear() + 1, 1, 1);
+            first = pageFirst;
+            if (first.getFullYear() % 4 === 0) {
+                pageYear = leapYear;
+            } else {
+                pageYear = notLeapYear;
+            }
+        } else {
+            pageFirst = new Date(first.getFullYear(), first.getMonth() + 1, 1);
+            first = pageFirst;
+        }
+        today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
+        currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;' + first.getFullYear();
+        removeCalendar();
+        showCalendar();
+        showMain();
+        clickedDate1 = document.getElementById(today.getDate());
+        clickedDate1.classList.add('active');
+        clickStart();
+        reshowingList();
+    }
+</script>
