@@ -2,7 +2,7 @@
 @font-face {font-family: "Pretendard"; font-weight: 700; src: url(./files/Pretendard-Bold.woff2);}
 @font-face {font-family: "Pretendard"; font-weight: 900; src: url(./files/Pretendard-Black.woff2);}
 
-* {font-family: 'Pretendard'; font-weight: 900; text-decoration: none; color: #000; margin: 0; padding: 0;}
+* {font-family: 'Pretendard'; font-weight: 900; text-decoration: none; color: #992327; margin: 0; padding: 0;}
 
 body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow: hidden; margin: 0; padding: 0;}
 
@@ -27,7 +27,7 @@ body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow: hidden; ma
             tbody {vertical-align: top; font-size: 20px;}
                 tr.date {text-align: center;}
                     tr.date td {font-weight: 400; width: calc(90vw/7); height: calc(var(--vh, 1vh) * 40 / 5); table-layout: fixed; border-radius: 10px;}
-                        tr.date td:active, tr.date td:focus {background: #00000005;}
+                        tr.date td:active, tr.date td:focus {background: #99232705;}
                         tr.date td:nth-child(1) {color: #ff0000; padding-left: 5vw;}
                         tr.date td:nth-child(7) {color: #0072de; padding-right: 5vw;}
                         p.dateName {font-size: 12px; font-weight: 400; color: #ff0000;}
@@ -70,3 +70,10 @@ table.timetable {width: 50vw; margin-left: 25vw; margin-top: calc(var(--vh, 1vh)
 
         span.subject {font-weight: 400;}
         span.teacher {font-weight: 400; font-size: 80%; margin-left: 5px;}
+
+div.daejucup {width: 90vw; height: calc(var(--vh, 1vh) * 30); border: 1px solid #992327; border-radius: 30px; text-align: center;}
+    .home {width: 30vw; padding-left: 5vw; height: calc(var(--vh, 1vh) * 30);}
+        .homeEmblem {width: 30vw; height: calc(var(--vh, 1vh) * 10);}
+            .homeEmblem img {height: calc(var(--vh, 1vh) * 10);}
+        p.homeName {width: 30vw; font-size: 16px;}
+        p.homeScorer {width: 45vw; text-align: left; font-size: 14px;}
