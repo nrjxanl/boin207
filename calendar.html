@@ -21,109 +21,6 @@
     </header>
 
     <div class="cal">
-        <table class="cal" id="apr">
-            <thead>
-                <tr class="monthInfo">
-                    <td class="prev" onclick="march();">◂</td>
-                    <td class="month" colspan="5">2023년 4월</td>
-                    <td class="next" onclick="may();">▸</td>
-                </tr>
-                <tr class="dotw">
-                    <td>일</td>
-                    <td>월</td>
-                    <td>화</td>
-                    <td>수</td>
-                    <td>목</td>
-                    <td>금</td>
-                    <td>토</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="date">
-                    <td class="prevMonth">26</td>
-                    <td class="prevMonth">27</td>
-                    <td class="prevMonth">28</td>
-                    <td class="prevMonth">29</td>
-                    <td class="prevMonth">30</td>
-                    <td class="prevMonth" onclick="mar31();">31<br>
-                        <div class="gray"></div>
-                    </td>
-                    <td>1</td>
-                </tr>
-                <tr class="date">
-                    <td>2</td>
-                    <td onclick="apr3();">3<br>
-                        <div class="blue"></div>
-                    </td>
-                    <td>4</td>
-                    <td onclick="apr5();">5<br>
-                        <div class="gray"></div>
-                    </td>
-                    <td>6</td>
-                    <td onclick="apr7();">7<br>
-                        <div class="blue"></div>
-                    </td>
-                    <td>8</td>
-                </tr>
-                <tr class="date">
-                    <td>9</td>
-                    <td onclick="apr10();">10<br>
-                        <div class="blue"></div>
-                    </td>
-                    <td>11<br>
-                        <div class="ftbl">
-                            7 v 8
-                        </div>
-                    </td>
-                    <td onclick="apr12();">12<br>
-                        <div class="blue"></div>
-                    </td>
-                    <td onclick="apr13();">13<br>
-                        <div class="blue"></div>
-                    </td>
-                    <td>14</td>
-                    <td>15</td>
-                </tr>
-                <tr class="date">
-                    <td>16</td>
-                    <td onclick="apr17();">17<br>
-                        <div class="blue"></div>
-                    </td>
-                    <td>18</td>
-                    <td>19</td>
-                    <td>20</td>
-                    <td>21</td>
-                    <td>22</td>
-                </tr>
-                <tr class="date">
-                    <td>23</td>
-                    <td>24</td>
-                    <td>25</td>
-                    <td>26</td>
-                    <td>37</td>
-                    <td onclick="apr28();">28<br>
-                        <div class="red"></div>
-                    </td>
-                    <td>29</td>
-                </tr>
-                <tr class="date">
-                    <td>30</td>
-                    <td class="nextMonth" onclick="may1();">1<br>
-                        <div class="red"></div>
-                    </td>
-                    <td class="nextMonth" onclick="may2();">2<br>
-                        <div class="red"></div>
-                    </td>
-                    <td class="nextMonth" onclick="may3();">3<br>
-                        <div class="red"></div>
-                    </td>
-                    <td class="nextMonth">4</td>
-                    <td class="nextMonth">5</td>
-                    <td class="nextMonth">6</td>
-                </tr>
-            </tbody>
-        </table>
-
         <table class="cal" id="may">
             <thead>
                 <tr class="monthInfo">
@@ -159,10 +56,11 @@
                 </tr>
                 <tr class="date">
                     <td>7</td>
-                    <td>8<br>
+                    <td onclick="may8()">8<br>
                         <div class="ftbl">
                             7 v 9
-                        </div>
+                        </div><br>
+                        <div class="blue"></div>
                     </td>
                     <td>9</td>
                     <td>10</td>
@@ -173,7 +71,9 @@
                 <tr class="date">
                     <td>14</td>
                     <td style="color: #ff0000" style="color: #ff0000">15<p class="dateName">재량<br>휴업일</p></td>
-                    <td>16</td>
+                    <td onclick="may16()">16<br>
+                        <div class="blue"></div>
+                    </td>
                     <td>17</td>
                     <td>18</td>
                     <td>19</td>
@@ -246,7 +146,9 @@
                 </tr>
                 <tr class="date">
                     <td>11</td>
-                    <td>12</td>
+                    <td onclick="jun12()">12<br>
+                        <div class="blue"></div>
+                    </td>
                     <td>13</td>
                     <td>14</td>
                     <td>15</td>
@@ -949,6 +851,109 @@
                 </tr>
             </tbody>
         </table>
+
+        <table class="cal" id="apr">
+            <thead>
+                <tr class="monthInfo">
+                    <td class="prev" onclick="march();">◂</td>
+                    <td class="month" colspan="5">2023년 4월</td>
+                    <td class="next" onclick="may();">▸</td>
+                </tr>
+                <tr class="dotw">
+                    <td>일</td>
+                    <td>월</td>
+                    <td>화</td>
+                    <td>수</td>
+                    <td>목</td>
+                    <td>금</td>
+                    <td>토</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="date">
+                    <td class="prevMonth">26</td>
+                    <td class="prevMonth">27</td>
+                    <td class="prevMonth">28</td>
+                    <td class="prevMonth">29</td>
+                    <td class="prevMonth">30</td>
+                    <td class="prevMonth" onclick="mar31();">31<br>
+                        <div class="gray"></div>
+                    </td>
+                    <td>1</td>
+                </tr>
+                <tr class="date">
+                    <td>2</td>
+                    <td onclick="apr3();">3<br>
+                        <div class="blue"></div>
+                    </td>
+                    <td>4</td>
+                    <td onclick="apr5();">5<br>
+                        <div class="gray"></div>
+                    </td>
+                    <td>6</td>
+                    <td onclick="apr7();">7<br>
+                        <div class="blue"></div>
+                    </td>
+                    <td>8</td>
+                </tr>
+                <tr class="date">
+                    <td>9</td>
+                    <td onclick="apr10();">10<br>
+                        <div class="blue"></div>
+                    </td>
+                    <td>11<br>
+                        <div class="ftbl">
+                            7 v 8
+                        </div>
+                    </td>
+                    <td onclick="apr12();">12<br>
+                        <div class="blue"></div>
+                    </td>
+                    <td onclick="apr13();">13<br>
+                        <div class="blue"></div>
+                    </td>
+                    <td>14</td>
+                    <td>15</td>
+                </tr>
+                <tr class="date">
+                    <td>16</td>
+                    <td onclick="apr17();">17<br>
+                        <div class="blue"></div>
+                    </td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                </tr>
+                <tr class="date">
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>37</td>
+                    <td onclick="apr28();">28<br>
+                        <div class="red"></div>
+                    </td>
+                    <td>29</td>
+                </tr>
+                <tr class="date">
+                    <td>30</td>
+                    <td class="nextMonth" onclick="may1();">1<br>
+                        <div class="red"></div>
+                    </td>
+                    <td class="nextMonth" onclick="may2();">2<br>
+                        <div class="red"></div>
+                    </td>
+                    <td class="nextMonth" onclick="may3();">3<br>
+                        <div class="red"></div>
+                    </td>
+                    <td class="nextMonth">4</td>
+                    <td class="nextMonth">5</td>
+                    <td class="nextMonth">6</td>
+                </tr>
+            </tbody>
+        </table>
         
     </div>
 
@@ -1050,6 +1055,18 @@
             <div class="skdDate"><span class="skdDateMonth">5월</span>3</div>
             <div class="schedTest">1학기 중간고사</div>
         </div>
+        <div class="skd" id="may8">
+            <div class="skdDate"><span class="skdDateMonth">5월</span>8</div>
+            <div class="schedEval">기하 형성평가</div>
+        </div>
+        <div class="skd" id="may16">
+            <div class="skdDate"><span class="skdDateMonth">5월</span>16</div>
+            <div class="schedEval">영어 나만의 광고 제작 수행평가</div>
+        </div>
+        <div class="skd" id="jun12">
+            <div class="skdDate"><span class="skdDateMonth">6월</span>12</div>
+            <div class="schedEval">사회문제탐구 서평 작성</div>
+        </div>
         <div class="skd" id="jul3">
             <div class="skdDate"><span class="skdDateMonth">7월</span>3</div>
             <div class="schedTest">1학기 기말고사</div>
@@ -1121,6 +1138,7 @@
     </div>
 
     <script src="./script.js"></script>
+    <script src="./timetable.js"></script>
 
 </body>
 
