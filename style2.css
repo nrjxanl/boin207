@@ -4,9 +4,9 @@
 
 * {font-family: 'Pretendard'; font-weight: 900; text-decoration: none; color: #000; margin: 0; padding: 0;}
 
-body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow: hidden; margin: 0; padding: 0;}
+body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow-x: hidden; margin: 0; padding: 0;}
 
-    header {width: 100vw; height: calc(var(--vh, 1vh) * 5.5); text-align: center; padding-top: calc(var(--vh, 1vh) * 4.5); font-size: 15px;}
+    header {width: 100vw; height: calc(var(--vh, 1vh) * 7); text-align: center; padding-top: calc(var(--vh, 1vh) * 4.5); font-size: 15px; position: fixed; left: 0; top: 0; background: #fff;}
         header a {margin: 0 3vw; font-weight: 700; text-decoration: none;}
 
     .cal {background: #fff; -ms-overflow-style: none; width: 50vw; height: calc(var(--vh, 1vh) * 80); text-align: center; white-space: nowrap; overflow-x: hidden; overflow-y: hidden; padding-left: 5vw;}
@@ -71,3 +71,17 @@ table.timetable {width: 20vw; height: calc(var(--vh, 1vh) * 60); margin-left: 40
         
         span.subject {font-weight: 400;}
         span.teacher {font-weight: 400; font-size: 80%; margin-left: 5px;}
+
+div.daejucup {width: 40vw; margin-left: 30vw; text-align: center;}
+    table.daejucup {text-align: center;}
+        td.homeEmblem {width: 30vw; height: calc(var(--vh, 1vh) * 15);}
+            td.homeEmblem img {height: calc(var(--vh, 1vh) * 10); margin-top: calc(var(--vh, 1vh) * 4);}
+        td.score {width: 20vw;}
+            p.score {font-size: 50px; margin-top: calc(var(--vh, 1vh) * 6);}
+            p.date {font-size: 10px; font-weight: 400;}
+        td.awayEmblem {width: 30vw; height: calc(var(--vh, 1vh) * 15);}
+            td.awayEmblem img {height: calc(var(--vh, 1vh) * 10); margin-top: calc(var(--vh, 1vh) * 4);}
+        td.homeName {width: 30vw; font-size: 16px; height: 32px;}
+        td.awayName {width: 30vw; font-size: 16px; height: 32px;}
+        td.homeScorer {width: 30vw; text-align: center; font-size: 10px; font-weight: 400;}
+        td.awayScorer {width: 30vw; text-align: center; font-size: 10px; font-weight: 400;}

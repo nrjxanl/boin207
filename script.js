@@ -3,6 +3,7 @@ window.addEventListener('load', function() {
     document.getElementById('may16').scrollIntoView({behavior: 'smooth'});
   });
   
+
 // vh값 정의
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -11,6 +12,45 @@ window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 })
+
+
+// 달력
+function march() {
+    document.getElementById('mar').scrollIntoView();
+}
+function april() {
+    document.getElementById('apr').scrollIntoView();
+}
+function may() {
+    document.getElementById('may').scrollIntoView();
+}
+function june() {
+    document.getElementById('jun').scrollIntoView();
+}
+function july() {
+    document.getElementById('jul').scrollIntoView();
+}
+function august() {
+    document.getElementById('aug').scrollIntoView();
+}
+function september() {
+    document.getElementById('sep').scrollIntoView();
+}
+function october() {
+    document.getElementById('oct').scrollIntoView();
+}
+function november() {
+    document.getElementById('nov').scrollIntoView();
+}
+function december() {
+    document.getElementById('dec').scrollIntoView();
+}
+function january() {
+    document.getElementById('jan').scrollIntoView();
+}
+function february() {
+    document.getElementById('feb').scrollIntoView();
+}
 
 
 // 일정으로 이동
@@ -133,4 +173,13 @@ function dec12() {
 }
 function dec13() {
     document.getElementById('dec13').scrollIntoView({behavior: 'smooth'});
+}
+
+
+// 대주컵 일정 padding-top
+
+if(window.matchMedia('(orientation: portrait)').matches) {
+    document.getElementById('daejucup').style.marginTop = vh * 10 + 'px';
+} else {
+    document.getElementById('daejucup').style.marginTop = vh * 15 + 'px';
 }
