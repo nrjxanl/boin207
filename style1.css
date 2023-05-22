@@ -5,7 +5,7 @@
 * {font-family: 'Pretendard'; font-weight: 900; text-decoration: none; color: #000; margin: 0; padding: 0;}
 
 ::-webkit-scrollbar {width: 15px;}
-::-webkit-scrollbar-thumb {background: #fff; border: 4px solid transparent; border-radius: 10px; max-height: 5px;}
+::-webkit-scrollbar-thumb {background: #992327aa; border: 4px solid #fff; border-radius: 10px; max-height: 5px;}
     ::-webkit-scrollbar-thumb:hover {background: #992327cc;}
 ::-webkit-scrollbar-track {background: #fff;}
 
