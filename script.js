@@ -8,10 +8,10 @@ window.addEventListener('load', function() {
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-window.addEventListener('resize', () => {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-})
+// window.addEventListener('resize', () => {
+//     let vh = window.innerHeight * 0.01;
+//     document.documentElement.style.setProperty('--vh', `${vh}px`);
+// })
 
 
 // 달력
@@ -176,7 +176,7 @@ function dec13() {
 }
 
 
-// 대주컵 일정 padding-top
+// 일정 목록 속성
 
 if(window.matchMedia('(orientation: portrait)').matches) {
     document.getElementById('daejucup').style.marginTop = vh * 10 + 'px';

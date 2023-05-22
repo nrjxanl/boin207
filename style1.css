@@ -4,9 +4,14 @@
 
 * {font-family: 'Pretendard'; font-weight: 900; text-decoration: none; color: #000; margin: 0; padding: 0;}
 
+::-webkit-scrollbar {width: 15px;}
+::-webkit-scrollbar-thumb {background: #fff; border: 4px solid transparent; border-radius: 10px; max-height: 5px;}
+    ::-webkit-scrollbar-thumb:hover {background: #992327cc;}
+::-webkit-scrollbar-track {background: #fff;}
+
 body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow-x: hidden; margin: 0; padding: 0;}
 
-    header {width: 100vw; height: calc(var(--vh, 1vh) * 5); text-align: center; padding-top: calc(var(--vh, 1vh) * 2); font-size: 15px; position: fixed; left: 0; top: 0; background: #fff;}
+    header {width: 100vw; height: calc(var(--vh, 1vh) * 5); text-align: center; padding-top: calc(var(--vh, 1vh) * 2); font-size: 15px; background: #fff;}
         header a {margin: 0 3vw; font-weight: 700; text-decoration: none;}
 
     .cal {background: #fff; -ms-overflow-style: none; width: 100vw; height: calc(var(--vh, 1vh) * 50); text-align: center; white-space: nowrap; overflow-x: hidden; overflow-y: hidden;}
@@ -43,7 +48,7 @@ body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow-x: hidden; 
                     .dgbl {background: blueviolet; width: auto; height: 15px; border-radius: 7.5px; margin-bottom: -20px; font-size: 12px; color: #fff; font-weight: 700; letter-spacing: .5px; text-align: center;}
                     .bkbl {background: orange; width: auto; height: 15px; border-radius: 7.5px; margin-bottom: -20px; font-size: 12px; color: #fff; font-weight: 700; letter-spacing: .5px; text-align: center;}
 
-    .schedule {width: 100vw; height: calc(var(--vh, 1vh) * 45); position: fixed; top: calc(var(--vh, 1vh) * 55); overflow: scroll;}
+    .schedule {width: 100vw; height: calc(var(--vh, 1vh) * 43); position: fixed; top: calc(var(--vh, 1vh) * 57); overflow-x: hidden; overflow-y: scroll;}
 
         .skd {width: 100vw; height: 100px; background: none; display: flex; margin-bottom: -30px;}
         .skdDup {width: 100vw; height: 100px; background: none; display: flex; margin-bottom: -45px;}
@@ -75,12 +80,12 @@ div.daejucup {width: 90vw; margin-left: 5vw; text-align: center;}
     table.daejucup {text-align: center;}
         td.homeEmblem {width: 30vw; height: calc(var(--vh, 1vh) * 15);}
             td.homeEmblem img {height: calc(var(--vh, 1vh) * 10); margin-top: calc(var(--vh, 1vh) * 4);}
-        td.score {width: 20vw;}
+        td.score {width: 30vw;}
             p.score {font-size: 50px; margin-top: calc(var(--vh, 1vh) * 6);}
             p.date {font-size: 10px; font-weight: 400;}
         td.awayEmblem {width: 30vw; height: calc(var(--vh, 1vh) * 15);}
             td.awayEmblem img {height: calc(var(--vh, 1vh) * 10); margin-top: calc(var(--vh, 1vh) * 4);}
         td.homeName {width: 30vw; font-size: 16px; height: 32px;}
         td.awayName {width: 30vw; font-size: 16px; height: 32px;}
-        td.homeScorer {width: 30vw; text-align: center; font-size: 10px; font-weight: 400;}
-        td.awayScorer {width: 30vw; text-align: center; font-size: 10px; font-weight: 400;}
+        td.homeScorer {width: 30vw; text-align: center; font-size: 10px; font-weight: 400; word-break: break-all;}
+        td.awayScorer {width: 30vw; text-align: center; font-size: 10px; font-weight: 400; word-break: break-all;}
