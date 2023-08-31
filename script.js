@@ -1,185 +1,169 @@
-// 로딩 후 자동 실행
-window.addEventListener('load', function() {
-    document.getElementById('may16').scrollIntoView({behavior: 'smooth'});
-  });
-  
+// 이번 달 table 제외 display: none 설정
+newDate = new Date();
+month = newDate.getMonth();
 
-// vh값 정의
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+$("table").css("display", "none");
+$("table").eq(month - 2).css("display", "table");
 
-// window.addEventListener('resize', () => {
-//     let vh = window.innerHeight * 0.01;
-//     document.documentElement.style.setProperty('--vh', `${vh}px`);
-// })
+if (month < 3) {
+    $("table").eq(month + 10).css("display", "table");
+};
 
+// timetable array로 가져오기
+timetableList = Object.keys(timetable);
 
-// 달력
-function march() {
-    document.getElementById('mar').scrollIntoView();
-}
-function april() {
-    document.getElementById('apr').scrollIntoView();
-}
-function may() {
-    document.getElementById('may').scrollIntoView();
-}
-function june() {
-    document.getElementById('jun').scrollIntoView();
-}
-function july() {
-    document.getElementById('jul').scrollIntoView();
-}
-function august() {
-    document.getElementById('aug').scrollIntoView();
-}
-function september() {
-    document.getElementById('sep').scrollIntoView();
-}
-function october() {
-    document.getElementById('oct').scrollIntoView();
-}
-function november() {
-    document.getElementById('nov').scrollIntoView();
-}
-function december() {
-    document.getElementById('dec').scrollIntoView();
-}
-function january() {
-    document.getElementById('jan').scrollIntoView();
-}
-function february() {
-    document.getElementById('feb').scrollIntoView();
-}
+// 일별 dateClass 선언
+$("table").each(function () {
 
+    month = $(this).attr("class");
 
-// 일정으로 이동
-function mar3() {
-    document.getElementById('mar3').scrollIntoView({behavior: 'smooth'});
-}
-function mar6() {
-    document.getElementById('mar6').scrollIntoView({behavior: 'smooth'});
-}
-function mar10() {
-    document.getElementById('mar10').scrollIntoView({behavior: 'smooth'});
-}
-function mar13() {
-    document.getElementById('mar13').scrollIntoView({behavior: 'smooth'});
-}
-function mar14() {
-    document.getElementById('mar14').scrollIntoView({behavior: 'smooth'});
-}
-function mar16() {
-    document.getElementById('mar16').scrollIntoView({behavior: 'smooth'});
-}
-function mar20() {
-    document.getElementById('mar20').scrollIntoView({behavior: 'smooth'});
-}
-function mar23() {
-    document.getElementById('mar23').scrollIntoView({behavior: 'smooth'});
-}
-function mar27() {
-    document.getElementById('mar27').scrollIntoView({behavior: 'smooth'});
-}
-function mar31() {
-    document.getElementById('mar31').scrollIntoView({behavior: 'smooth'});
-}
-function apr3() {
-    document.getElementById('apr3').scrollIntoView({behavior: 'smooth'});
-}
-function apr5() {
-    document.getElementById('apr5').scrollIntoView({behavior: 'smooth'});
-}
-function apr7() {
-    document.getElementById('apr7').scrollIntoView({behavior: 'smooth'});
-}
-function apr10() {
-    document.getElementById('apr10').scrollIntoView({behavior: 'smooth'});
-}
-function apr12() {
-    document.getElementById('apr12').scrollIntoView({behavior: 'smooth'});
-}
-function apr13() {
-    document.getElementById('apr13').scrollIntoView({behavior: 'smooth'});
-}
-function apr17() {
-    document.getElementById('apr17').scrollIntoView({behavior: 'smooth'});
-}
-function apr28() {
-    document.getElementById('apr28').scrollIntoView({behavior: 'smooth'});
-}
-function may1() {
-    document.getElementById('may1').scrollIntoView({behavior: 'smooth'});
-}
-function may2() {
-    document.getElementById('may2').scrollIntoView({behavior: 'smooth'});
-}
-function may3() {
-    document.getElementById('may3').scrollIntoView({behavior: 'smooth'});
-}
-function may8() {
-    document.getElementById('may8').scrollIntoView({behavior: 'smooth'});
-}
-function may16() {
-    document.getElementById('may16').scrollIntoView({behavior: 'smooth'});
-}
-function jun12() {
-    document.getElementById('jun12').scrollIntoView({behavior: 'smooth'});
-}
-function jul3() {
-    document.getElementById('jul3').scrollIntoView({behavior: 'smooth'});
-}
-function jul4() {
-    document.getElementById('jul4').scrollIntoView({behavior: 'smooth'});
-}
-function jul5() {
-    document.getElementById('jul5').scrollIntoView({behavior: 'smooth'});
-}
-function jul6() {
-    document.getElementById('jul6').scrollIntoView({behavior: 'smooth'});
-}
-function jul7() {
-    document.getElementById('jul7').scrollIntoView({behavior: 'smooth'});
-}
-function sep6() {
-    document.getElementById('sep6').scrollIntoView({behavior: 'smooth'});
-}
-function oct10() {
-    document.getElementById('oct10').scrollIntoView({behavior: 'smooth'});
-}
-function oct11() {
-    document.getElementById('oct11').scrollIntoView({behavior: 'smooth'});
-}
-function oct12() {
-    document.getElementById('oct12').scrollIntoView({behavior: 'smooth'});
-}
-function oct13() {
-    document.getElementById('oct13').scrollIntoView({behavior: 'smooth'});
-}
-function nov21() {
-    document.getElementById('nov21').scrollIntoView({behavior: 'smooth'});
-}
-function dec7() {
-    document.getElementById('dec7').scrollIntoView({behavior: 'smooth'});
-}
-function dec8() {
-    document.getElementById('dec8').scrollIntoView({behavior: 'smooth'});
-}
-function dec11() {
-    document.getElementById('dec11').scrollIntoView({behavior: 'smooth'});
-}
-function dec12() {
-    document.getElementById('dec12').scrollIntoView({behavior: 'smooth'});
-}
-function dec13() {
-    document.getElementById('dec13').scrollIntoView({behavior: 'smooth'});
-}
+    $(this).find("tr:nth-of-type(n+2) > td").each(function () {
+        date = $(this).text().replace(/[^0-9]/g, "");
+        if (date.length == 1) {
+            date = "0" + date;
+        };
 
+        dateClass = month + date;
 
-// 일정 목록 속성
+        $(this).attr("class", "d" + dateClass);
 
-if(window.matchMedia('(orientation: portrait)').matches) {
-    document.getElementById('daejucup').style.marginTop = vh * 10 + 'px';
-} else {
-    document.getElementById('daejucup').style.marginTop = vh * 15 + 'px';
-}
+        // 전월일 경우
+        if ($(this).text().match("p")) {
+            $(this).removeAttr("class");
+
+            $(this).text($(this).text().replace(/[^0-9]/g, ""));
+            $(this).css("opacity", ".5");
+
+            dateClass = ((Number(month + date)) - 100).toString();
+
+            if (dateClass.length < 4) {
+                dateClass = "0" + dateClass;
+            };
+
+            $(this).attr("class", "d" + dateClass);
+        };
+
+        // 익월일 경우
+        if ($(this).text().match("n")) {
+            $(this).removeAttr("class");
+
+            $(this).text($(this).text().replace(/[^0-9]/g, ""));
+            $(this).css("opacity", ".5");
+
+            dateClass = ((Number(month + date)) + 100).toString();
+
+            if (dateClass.length < 4) {
+                dateClass = "0" + dateClass;
+            };
+
+            $(this).attr("class", "d" + dateClass);
+        };
+
+        // 요일 등 class 지정 제외
+        if (dateClass.length < 4) {
+            $(this).removeAttr("dateClass");
+        };
+
+        // 달력 클릭 시 일정, 시간표 표시
+        $(this).click(function () {
+            $("#bg").css("display", "block");
+            $("#sched").css("display", "block");
+
+            schedDate = $(this).attr("class").replace(/[^0-9]/g, "");
+            scheduleList = Object.values(schedule.date);
+            n = scheduleList.indexOf(schedDate);
+
+            week = ["일", "월", "화", "수", "목", "금", "토"];
+            if (schedDate.substr(0, 2) == "01" || schedDate.substr(0, 2) == "02") {
+                date = "2024-" + schedDate.substr(0, 2) + "-" + $(this).attr("class").substr(3, 2);
+            } else {
+                date = "2023-" + schedDate.substr(0, 2) + "-" + $(this).attr("class").substr(3, 2);
+            };
+
+            week = week[new Date(date).getDay()];
+
+            $("#date").text(schedDate.substr(0, 2) + "." + schedDate.substr(2, 2) + ".(" + week + ")");
+            $("#event").html(schedule.schedule[n]);
+            $("#event:empty").text("일정이 없습니다.").css("opacity", ".5");
+
+            week = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+            week = week[new Date(date).getDay()];
+
+            index = timetableList.indexOf(week, 0);
+
+            timetable1 = "<span>1교시</span>" + timetable[Object.keys(timetable)[index]][0];
+            timetable2 = "<span>2교시</span>" + timetable[Object.keys(timetable)[index]][1];
+            timetable3 = "<span>3교시</span>" + timetable[Object.keys(timetable)[index]][2];
+            timetable4 = "<span>4교시</span>" + timetable[Object.keys(timetable)[index]][3];
+            timetable5 = "<span>5교시</span>" + timetable[Object.keys(timetable)[index]][4];
+            timetable6 = "<span>6교시</span>" + timetable[Object.keys(timetable)[index]][5];
+            timetable7 = "<span>7교시</span>" + timetable[Object.keys(timetable)[index]][6];
+
+            $("#timetable > p").html(timetable1 + "<br>" + timetable2 + "<br>" + timetable3 + "<br>" + timetable4 + "<br>" + timetable5 + "<br>" + timetable6 + "<br>" + timetable7);
+        
+        });
+
+    });
+
+});
+
+// 빈 공간 클릭 시 팝업 없애기
+$("#bg").click(function () {
+    $("#bg").css("display", "none");
+    $("#sched").css("display", "none");
+
+    $("#date").empty();
+    $("#event").empty();
+    $("#timetable > p").empty();
+});
+
+// esc 누를 시 팝업 없애기
+$(document).keydown(function (event) {
+    if (event.keyCode == 27 || event.which == 27) {
+        $("#bg").css("display", "none");
+        $("#sched").css("display", "none");
+
+        $("#date").empty();
+        $("#event").empty().css("opacity", "1");
+        $("#timetable > p").empty();
+    };
+});
+
+// 오늘 날짜 구하기
+month = $("table").eq(newDate.getMonth() - 2).attr("class");
+
+date = newDate.getDate().toString();
+
+if (date.length == 1) {
+    date = "0" + date;
+};
+
+today = ".d" + month + date;
+
+$(today).css("border", "2px solid #c8c8c8");
+
+// 전월 달력 불러오기
+$(".prevMonth").click(function () {
+    prevMonth = (Number($(this).parents("table").attr("class")) + 1).toString();
+
+    if (prevMonth.length < 2) {
+        prevMonth = "0" + prevMonth;
+    };
+
+    $("table").css("display", "none");
+    $(this).parents("table").prev().css("display", "table");
+
+});
+
+// 익월 달력 불러오기
+$(".nextMonth").click(function () {
+    nextMonth = (Number($(this).parents("table").attr("class")) + 1).toString();
+
+    if (nextMonth.length < 2) {
+        nextMonth = "0" + nextMonth;
+    };
+
+    $("table").css("display", "none");
+    $(this).parents("table").next().css("display", "table");
+
+});

@@ -1,91 +1,16 @@
-@font-face {font-family: "Pretendard"; font-weight: 400; src: url(./files/Pretendard-Regular.woff2);}
-@font-face {font-family: "Pretendard"; font-weight: 700; src: url(./files/Pretendard-Bold.woff2);}
-@font-face {font-family: "Pretendard"; font-weight: 900; src: url(./files/Pretendard-Black.woff2);}
+* {text-align: center; font-size: 5vw; margin: 0; padding: 0; border-spacing: 0;}
 
-* {font-family: 'Pretendard'; font-weight: 900; text-decoration: none; color: #000; margin: 0; padding: 0;}
+#table {position: absolute;}
+table {width: 80vw; margin: 5vh 0 0 10vw;}
+tr {height: 8vh;}
+td {width: calc(80vw / 7); border-radius: 3vw;}
+tr:nth-child(n+1) > td:nth-child(1) {color: #f00;}
+tr:nth-child(n+1) > td:nth-child(7) {color: #00f;}
 
-::-webkit-scrollbar {width: 15px;}
-::-webkit-scrollbar-thumb {background: #992327aa; border: 4px solid #fff; border-radius: 10px; max-height: 5px;}
-    ::-webkit-scrollbar-thumb:hover {background: #992327cc;}
-::-webkit-scrollbar-track {background: #fff;}
-
-body {background: #fff; height: calc(var(--vh, 1vh) * 100); overflow-x: hidden; margin: 0; padding: 0;}
-
-    header {width: 100vw; height: calc(var(--vh, 1vh) * 5); text-align: center; padding-top: calc(var(--vh, 1vh) * 2); font-size: 15px; background: #fff;}
-        header a {margin: 0 3vw; font-weight: 700; text-decoration: none;}
-
-    .cal {background: #fff; -ms-overflow-style: none; width: 100vw; height: calc(var(--vh, 1vh) * 50); text-align: center; white-space: nowrap; overflow-x: hidden; overflow-y: hidden;}
-
-        table.cal {width: 100vw; text-align: left; background: #fff; border-spacing: unset; border-collapse: separate;}
-
-            thead {vertical-align: middle;}
-                tr.monthInfo {text-align: center;}
-                    tr.monthInfo td {height: calc(var(--vh, 1vh) * 5);}
-                    td.prev {font-size: 30px; padding-left: 5vw;}
-                    td.month {font-size: 15px;}
-                    td.next {font-size: 30px; padding-right: 5vw;}
-                tr.dotw {text-align: center; vertical-align: middle;}
-                    tr.dotw td {font-size: 15px; text-align: center; font-weight: 400; height: calc(var(--vh, 1vh) * 5);}
-                    tr.dotw td:nth-child(1) {padding-left: 5vw;}
-                    tr.dotw td:nth-child(7) {padding-right: 5vw;}
-
-            tbody {vertical-align: top; font-size: 20px;}
-                tr.date {text-align: center;}
-                    tr.date td {font-weight: 400; width: calc(90vw/7); height: calc(var(--vh, 1vh) * 40 / 5); table-layout: fixed; border-radius: 10px;}
-                        tr.date td:active, tr.date td:focus {background: #000;}
-                        tr.date td:nth-child(1) {color: #ff0000; padding-left: 5vw;}
-                        tr.date td:nth-child(7) {color: #0072de; padding-right: 5vw;}
-                        p.dateName {font-size: 12px; font-weight: 400; color: #ff0000;}
-                    td.prevMonth, td.nextMonth {opacity: 30%;}
-
-                    #apr tbody tr td, #jul tbody tr td, #dec tbody tr td {height: calc(var(--vh, 1vh) * 40 / 6);}
-
-                    .red, .blue, .gray {width: 8px; height: 8px; border-radius: 100%; display: inline-block; margin-bottom: 10px;}
-                    .red {background: red;}
-                    .blue {background: #0072de;}
-                    .gray {background: gray;}
-                    .ftbl {background: #00985f; width: auto; height: 15px; border-radius: 7.5px; margin-bottom: -20px; font-size: 12px; color: #fff; font-weight: 700; letter-spacing: .5px; text-align: center;}
-                    .dgbl {background: blueviolet; width: auto; height: 15px; border-radius: 7.5px; margin-bottom: -20px; font-size: 12px; color: #fff; font-weight: 700; letter-spacing: .5px; text-align: center;}
-                    .bkbl {background: orange; width: auto; height: 15px; border-radius: 7.5px; margin-bottom: -20px; font-size: 12px; color: #fff; font-weight: 700; letter-spacing: .5px; text-align: center;}
-
-    .schedule {width: 100vw; height: calc(var(--vh, 1vh) * 43); position: fixed; top: calc(var(--vh, 1vh) * 57); overflow-x: hidden; overflow-y: scroll;}
-
-        .skd {width: 100vw; height: 100px; background: none; display: flex; margin-bottom: -30px;}
-        .skdDup {width: 100vw; height: 100px; background: none; display: flex; margin-bottom: -45px;}
-            .skdDate {width: 20vw; text-align: center; display: flex; flex-direction: column; padding-left: 5vw; font-size: 30px;}
-                span.skdDateMonth {opacity: 70%; font-size: 10px; margin: 5px 0 -5px 0;}
-                .schedTest {width: 55vw; height: min-content; padding: 13px 20px; text-align: justify; background: #ff0000; color: #fff; font-weight: 700; border-radius: 10px; font-size: 15px; word-break: keep-all; white-space: normal; line-height: 1.4; text-align: center;}
-                .schedEval {width: 55vw; height: min-content; padding: 13px 20px; text-align: justify; background: #0072de; color: #fff; font-weight: 700; border-radius: 10px; font-size: 15px; word-break: keep-all; white-space: normal; line-height: 1.4; text-align: center;}
-                .schedEtc {width: 55vw; height: min-content; padding: 13px 20px; text-align: justify; background: #aaaaaa; color: #fff; font-weight: 700; border-radius: 10px; font-size: 15px; word-break: keep-all; white-space: normal; line-height: 1.4; text-align: center;}
-
-    button.top {width: 40px; height: 40px; border-radius: 100%; background-color: #0072de; position: fixed; right: 5vw; bottom: 5vw; border: none;}
-        button.top img {width: 30px; height: auto; margin-top: 5px; filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(67deg) brightness(107%) contrast(104%);}
-
-
-table.timetable {width: 50vw; margin-left: 25vw; margin-top: calc(var(--vh, 1vh) * 2); text-align: center; display: none;}
-    
-    .timetable {font-size: 18px; vertical-align: middle; width: 100vw; text-align: center; margin-top: 5vh;}
-        .timetable span {font-weight: 700;}
-        #today {font-size: 80%; font-weight: 400; margin-left: 5px;}
-    
-    table.timetable tbody {font-size: 15px; vertical-align: middle;}
-        table.timetable tbody tr td {height: calc(var(--vh, 1vh) * 40 / 7); font-weight: 400;}
-            table.timetable tbody tr td:nth-child(1) {width: 15vw;}
-            table.timetable tbody tr td:nth-child(2) {width: 35vw;}
-
-        span.subject {font-weight: 400;}
-        span.teacher {font-weight: 400; font-size: 80%; margin-left: 5px;}
-
-div.daejucup {width: 90vw; margin-left: 5vw; text-align: center;}
-    table.daejucup {text-align: center;}
-        td.homeEmblem {width: 30vw; height: calc(var(--vh, 1vh) * 15);}
-            td.homeEmblem img {height: calc(var(--vh, 1vh) * 10); margin-top: calc(var(--vh, 1vh) * 4);}
-        td.score {width: 30vw;}
-            p.score {font-size: 50px; margin-top: calc(var(--vh, 1vh) * 6);}
-            p.date {font-size: 10px; font-weight: 400;}
-        td.awayEmblem {width: 30vw; height: calc(var(--vh, 1vh) * 15);}
-            td.awayEmblem img {height: calc(var(--vh, 1vh) * 10); margin-top: calc(var(--vh, 1vh) * 4);}
-        td.homeName {width: 30vw; font-size: 16px; height: 32px;}
-        td.awayName {width: 30vw; font-size: 16px; height: 32px;}
-        td.homeScorer {width: 30vw; text-align: center; font-size: 10px; font-weight: 400; word-break: break-all;}
-        td.awayScorer {width: 30vw; text-align: center; font-size: 10px; font-weight: 400; word-break: break-all;}
+#bg {display: none; width: 100vw; height: 100vh; overflow: hidden; position: fixed; top: 0; left: 0; background: #a3a3a3; opacity: .9;}
+#sched {display: none; background: #fff; border-radius: 7vw; position: fixed; top: 20vh; left: calc((100vw - 70vw - 5vh) / 2); z-index: 100; overflow: scroll;}
+#date {font-size: 8vw; margin: 5vh 0 0 5vh; text-align: left; font-weight: bold;}
+#event {font-size: 5vw; margin: 2vh 0 0 5vh; text-align: left; line-height: 1.6;}
+#timetable > p {width: calc(70vw - 5vh); text-align: left; margin: 2vh 5vh 5vh 5vh; line-height: 1.6; font-size: 5vw;}
+#timetable > p > span:nth-of-type(2n-1) {text-align: left; font-size: 5vw; font-weight: bold; display: inline-block; width: 15vw;}
+#timetable > p > span:nth-of-type(2n) {margin-left: 2vw; font-size: 5vw; opacity: .6;}
