@@ -113,7 +113,7 @@ $("#bg").click(function () {
     $("#sched").css("display", "none");
 
     $("#date").empty();
-    $("#event").empty();
+    $("#event").empty().css("opacity", "1");
     $("#timetable > p").empty();
 });
 
