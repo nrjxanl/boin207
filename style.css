@@ -1,4 +1,36 @@
-* {text-align: center; margin: 0; padding: 0; border-spacing: 0;}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&family=Noto+Sans+KR:wght@100;400;700&display=swap");
+
+* {text-align: center; margin: 0; padding: 0; border-spacing: 0; font-family: "Noto Sans KR"; font-weight: 400;}
+
+@media (max-width: 840px) {
+
+    * {font-size: 20px;}
+
+    table {width: 80vw; margin: 5vh 0 0 10vw; position: sticky; top: 5vh; background: #fff;}
+    tr {height: 8vh;}
+    th {font-size: 30px; font-weight: bolder;}
+    td {width: calc(80vw / 7); border-radius: 3vw;}
+    td:active {background: #f0f0f0;}
+    tr:nth-child(n+1) > td:nth-child(1) {color: #f00;}
+    tr:nth-child(n+1) > td:nth-child(7) {color: #00f;}
+    td > p {font-size: 20px; border-radius: 50%; width: 5vw; height: 5vw; margin: .5vh 0 0 calc(((80vw / 7) - 5vw) / 2); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bolder;}
+
+    #toToday > div {width: calc((80vw / 7) - 4vw); height: calc((80vw / 7) - 4vw); margin: 2vw; box-shadow: 0 0 0 2px #000 inset; border-radius: 2vw; display: flex; justify-content: center; align-items: center; font-size: 30px; font-weight: bolder;}
+
+    #bg {display: none; width: 100vw; height: 100vh; overflow: hidden; position: fixed; top: 0; left: 0; background: #707070; opacity: .9;}
+    #sched {width: 400px; display: none; background: #fff; border-radius: 7vw; position: fixed; left: calc((100vw - 400px) / 2); z-index: 100; overflow: scroll;}
+    #date {font-size: 30px; margin: 60px 0 0 60px; text-align: left; font-weight: bolder;}
+    #event {font-size: 24px; margin: 2vh 0 0 60px; text-align: left; line-height: 1.6;}
+    #timetable > p {text-align: left; margin: 2vh 0 60px 60px; line-height: 1.6; font-size: 24px;}
+    #timetable > p > span:nth-of-type(2n-1) {font-size: 24px; text-align: left; font-weight: bolder; display: inline-block; width: 70px;}
+    #timetable > p > span:nth-of-type(2n) {margin-left: 2vw; font-size: 24px; opacity: .6;}
+
+    #todaySchedule {width: 80vw; margin: 5vh 0 0 10vw;}
+    #todaySchedule > p:nth-of-type(1) {text-align: left; font-size: 30px; font-weight: bolder; margin-bottom: 1vh;}
+    #todaySchedule > p:nth-of-type(1) > span {margin-left: 2vw; font-size: 24px;}
+    #todaySchedule > p:nth-of-type(2) {text-align: left; font-size: 24px; line-height: 1.6;}
+
+}
 
 @media (max-width: 425px) {
 
@@ -6,24 +38,25 @@
 
     table {width: 80vw; margin: 5vh 0 0 10vw; position: sticky; top: 5vh; background: #fff;}
     tr {height: 8vh;}
-    th {font-size: 20px;}
+    th {font-size: 20px; font-weight: bolder;}
     td {width: calc(80vw / 7); border-radius: 3vw;}
+    td:active {background: #f0f0f0;}
     tr:nth-child(n+1) > td:nth-child(1) {color: #f00;}
     tr:nth-child(n+1) > td:nth-child(7) {color: #00f;}
-    td > p {font-size: 14px; border-radius: 50%; width: 5vw; height: 5vw; margin: .5vh 0 0 calc(((80vw / 7) - 5vw) / 2); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold;}
+    td > p {font-size: 14px; border-radius: 50%; width: 5vw; height: 5vw; margin: .5vh 0 0 calc(((80vw / 7) - 5vw) / 2); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bolder;}
 
-    #toToday > div {width: calc((80vw / 7) - 4vw); height: calc((80vw / 7) - 4vw); margin: 2vw; box-shadow: 0 0 0 2px #000 inset; border-radius: 2vw; display: flex; justify-content: center; align-items: center;}
+    #toToday > div {width: calc((80vw / 7) - 4vw); height: calc((80vw / 7) - 4vw); margin: 2vw; box-shadow: 0 0 0 2px #000 inset; border-radius: 2vw; display: flex; justify-content: center; align-items: center; font-size: 16px; font-weight: bolder;}
 
-    #bg {display: none; width: 100vw; height: 100vh; overflow: hidden; position: fixed; top: 0; left: 0; background: #a3a3a3; opacity: .9;}
-    #sched {width: 80vw; display: none; background: #fff; border-radius: 7vw; position: fixed; left: 10vw; z-index: 100; overflow: scroll;}
-    #date {font-size: 30px; margin: 5vh 0 0 5vh; text-align: left; font-weight: bold;}
-    #event {font-size: 20px; margin: 2vh 0 0 5vh; text-align: left; line-height: 1.6;}
-    #timetable > p {text-align: left; margin: 2vh 0 5vh 5vh; line-height: 1.6; font-size: 20px;}
-    #timetable > p > span:nth-of-type(2n-1) {font-size: 20px; font-weight: bold; display: inline-block; width: 15vw; margin: 0 2vw 0 -2vw;}
+    #bg {display: none; width: 100vw; height: 100vh; overflow: hidden; position: fixed; top: 0; left: 0; background: #707070; opacity: .9;}
+    #sched {width: 300px; display: none; background: #fff; border-radius: 7vw; position: fixed; left: calc((100vw - 300px) / 2); z-index: 100; overflow: scroll;}
+    #date {font-size: 30px; margin: 40px 0 0 40px; text-align: left; font-weight: bolder;}
+    #event {font-size: 20px; margin: 2vh 0 0 40px; text-align: left; line-height: 1.6;}
+    #timetable > p {text-align: left; margin: 2vh 0 40px 40px; line-height: 1.6; font-size: 20px;}
+    #timetable > p > span:nth-of-type(2n-1) {font-size: 20px; text-align: left; font-weight: bolder; display: inline-block; width: 70px;}
     #timetable > p > span:nth-of-type(2n) {margin-left: 2vw; font-size: 20px; opacity: .6;}
 
-    #todaySchedule {width: 80vw; margin-left: 10vw;}
-    #todaySchedule > p:nth-of-type(1) {text-align: left; font-size: 24px; font-weight: bold; margin-bottom: 1vh;}
+    #todaySchedule {width: 80vw; margin: 5vh 0 0 10vw;}
+    #todaySchedule > p:nth-of-type(1) {text-align: left; font-size: 24px; font-weight: bolder; margin-bottom: 1vh;}
     #todaySchedule > p:nth-of-type(1) > span {margin-left: 2vw; font-size: 16px;}
     #todaySchedule > p:nth-of-type(2) {text-align: left; font-size: 20px; line-height: 1.6;}
 

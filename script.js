@@ -32,8 +32,11 @@ $("table").each(function () {
         if ($(this).text().match("p")) {
             $(this).removeAttr("class");
 
+            color = ($(this).css("color")).replace(")", "").split(", ");
+            color = color[0] + " " + color[1] + " " + color[2] + " / 50%)"
+
             $(this).text($(this).text().replace(/[^0-9]/g, ""));
-            $(this).css("opacity", ".5");
+            $(this).css("color", color);
 
             dateClass = ((Number(month + date)) - 100).toString();
 
@@ -48,8 +51,11 @@ $("table").each(function () {
         if ($(this).text().match("n")) {
             $(this).removeAttr("class");
 
+            color = ($(this).css("color")).replace(")", "").split(", ");
+            color = color[0] + " " + color[1] + " " + color[2] + " / 50%)"
+
             $(this).text($(this).text().replace(/[^0-9]/g, ""));
-            $(this).css("opacity", ".5");
+            $(this).css("color", color);
 
             dateClass = ((Number(month + date)) + 100).toString();
 
@@ -91,7 +97,11 @@ $("table").each(function () {
             week = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
             week = week[new Date(date).getDay()];
 
-            index = timetableList.indexOf(week, 0);
+            if($(this).css("color") == "rgb(255, 0, 0)" || $(this).css("color") == "rgb(0, 0, 255)") {
+                index = 0;
+            } else {
+                index = timetableList.indexOf(week, 0);
+            };
 
             timetable1 = "<span>1교시</span>" + timetable[Object.keys(timetable)[index]][0];
             timetable2 = "<span>2교시</span>" + timetable[Object.keys(timetable)[index]][1];
@@ -166,10 +176,10 @@ $("#todaySchedule > p:nth-of-type(1)").append("<span>" + Number(today.substr(1, 
 
 if($("#todaySchedule > p:nth-of-type(2)").text() == "undefined") {
     $("#todaySchedule > p:nth-of-type(2)").empty().text("오늘 일정이 없습니다.").css("opacity", ".5");
-}
+};
 
 // toToday 누르면 오늘 날짜로 이동
-$("#toToday > div").text(Number(today.substr(3, 2)))
+$("#toToday > div").text(Number(today.substr(3, 2)));
 
 $("#toToday > div").click(function () {
     $("table").css("display", "none");
@@ -218,4 +228,25 @@ $("td").each(function () {
         $(this).find("p").css("background", "#00f")
     };
 
+});
+
+// 방학 표시
+$("td").each(function () {
+    date = Number($(this).attr("class")?.substr(1, 4));
+
+    if(726 <= date && date <= 820) {
+        $(this).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#f0f0f0", "border-radius": 0});
+    };    
+    if(1230 <= date || date <= 204) {
+        $(this).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#f0f0f0", "border-radius": 0});
+    };
+    if(209 <= date && date <= 301) {
+        $(this).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#f0f0f0", "border-radius": 0});
+    };
+    $(".d0302").eq(1).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#f0f0f0", "border-radius": 0});
+
+    $(".d0726 > p, .d0820 > p").text("여름방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
+    $(".d1230 > p, .d0204 > p").text("겨울방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
+    $(".d0301").eq(0).find("p").text("봄방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
+    $(".d0209 > p").text("봄방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
 });
