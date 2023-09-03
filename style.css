@@ -18,8 +18,8 @@
     #toToday {display: flex; justify-content: center; margin-top: 1vh;}
     #toToday > div {width: calc((40vw / 7) - 2vw); height: calc((40vw / 7) - 2vw); box-shadow: 0 0 0 2px #000 inset; border-radius: 1vw; display: flex; justify-content: center; align-items: center; font-size: 24px; font-weight: bolder;}
 
-    #bg {display: none; width: 100vw; height: 100vh; overflow: hidden; position: fixed; top: 0; left: 0; background: #707070; opacity: .9;}
-    #sched {width: 400px; display: none; background: #fff; border-radius: 7vw; position: fixed; left: calc((50vw - 400px) / 2); z-index: 100;}
+    #bg {display: none; width: 100vw; height: 100vh; overflow: hidden; position: fixed; top: 0; left: 0; background: #707070; opacity: .9; z-index: 200;}
+    #sched {width: 400px; display: none; background: #fff; border-radius: 7vw; position: fixed; left: calc((50vw - 400px) / 2); z-index: 300;}
     #date {font-size: 24px; margin: 60px 0 0 60px; text-align: left; font-weight: bolder;}
     #event {font-size: 24px; margin: 2vh 0 0 60px; text-align: left; line-height: 1.6;}
     #timetable > p {text-align: left; margin: 2vh 0 60px 60px; line-height: 1.6; font-size: 24px;}
@@ -53,8 +53,8 @@
     #toToday {display: flex; justify-content: center; margin-top: 1.5vh;}
     #toToday > div {width: calc((80vw / 7) - 4vw); height: calc((80vw / 7) - 4vw); box-shadow: 0 0 0 2px #000 inset; border-radius: 2vw; display: flex; justify-content: center; align-items: center; font-size: 30px; font-weight: bolder;}
 
-    #bg {display: none; width: 100vw; height: 100vh; overflow: hidden; position: fixed; top: 0; left: 0; background: #707070; opacity: .9;}
-    #sched {width: 400px; display: none; background: #fff; border-radius: 7vw; position: fixed; left: calc((100vw - 400px) / 2); z-index: 100; overflow: scroll;}
+    #bg {display: none; width: 100vw; height: 100vh; overflow: hidden; position: fixed; top: 0; left: 0; background: #707070; opacity: .9; z-index: 200;}
+    #sched {width: 400px; display: none; background: #fff; border-radius: 7vw; position: fixed; left: calc((100vw - 400px) / 2); z-index: 300; overflow: scroll;}
     #date {font-size: 30px; margin: 60px 0 0 60px; text-align: left; font-weight: bolder;}
     #event {font-size: 24px; margin: 2vh 0 0 60px; text-align: left; line-height: 1.6;}
     #timetable > p {text-align: left; margin: 2vh 0 60px 60px; line-height: 1.6; font-size: 24px;}
@@ -90,8 +90,8 @@
     #toToday {display: flex; justify-content: center; margin-top: 2.5vh;}
     #toToday > div {width: calc((80vw / 7) - 4vw); height: calc((80vw / 7) - 4vw); box-shadow: 0 0 0 2px #000 inset; border-radius: 2vw; display: flex; justify-content: center; align-items: center; font-size: 16px; font-weight: bolder;}
 
-    #bg {display: none; width: 100vw; height: 100vh; overflow: hidden; position: fixed; top: 0; left: 0; background: #707070; opacity: .9;}
-    #sched {width: 300px; display: none; background: #fff; border-radius: 7vw; position: fixed; left: calc((100vw - 300px) / 2); z-index: 100; overflow: scroll;}
+    #bg {display: none; width: 100vw; height: 100vh; overflow: hidden; position: fixed; top: 0; left: 0; background: #707070; opacity: .9; z-index: 200;}
+    #sched {width: 300px; display: none; background: #fff; border-radius: 7vw; position: fixed; left: calc((100vw - 300px) / 2); z-index: 300; overflow: scroll;}
     #date {font-size: 30px; margin: 40px 0 0 40px; text-align: left; font-weight: bolder;}
     #event {font-size: 20px; margin: 2vh 0 0 40px; text-align: left; line-height: 1.6;}
     #timetable > p {text-align: left; margin: 2vh 0 40px 40px; line-height: 1.6; font-size: 20px;}

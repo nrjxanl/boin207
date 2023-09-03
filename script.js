@@ -185,9 +185,12 @@ if($("#todaySchedule > p:nth-of-type(2)").text() == "undefined") {
     $("#todaySchedule > p:nth-of-type(2)").empty().text("오늘 일정이 없습니다.").css("opacity", ".5");
 };
 
-if($(".d" + month + date).css("color") == "rgb(255, 0, 0)" || $(this).css("color") == "rgb(0, 0, 255)") {
+week = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+week = week[new Date(date).getDay()];
+
+if($(".d" + month + date).css("color") == "rgb(255, 0, 0)" || $(".d" + month + date).css("color") == "rgb(0, 0, 255)") {
     index = 0;
-} else {
+} else if($(".d" + month + date).css("color") == "rgb(0, 0, 0)") {
     index = timetableList.indexOf(week, 0);
 };
 
