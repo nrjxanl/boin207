@@ -1,3 +1,10 @@
+// 화면 width 변경 시 새로고침
+jQuery(function() {
+    window.onresize = function(){
+      document.location.reload();
+    };
+});
+
 // 이번 달 table 제외 display: none 설정
 newDate = new Date();
 month = newDate.getMonth();
@@ -254,26 +261,49 @@ $("td").each(function () {
 $("td").each(function () {
     date = Number($(this).attr("class")?.substr(1, 4));
 
-    if((726 <= date && date <= 820) || (1230 <= date || date <= 204) || (209 <= date && date <= 301)) {
-        $(this).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#f0f0f0", "border-radius": 0});
-    };    
-    $(".d0302").eq(1).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#f0f0f0", "border-radius": 0});
+    if(window.innerWidth < 840) {
+        if((726 <= date && date <= 820) || (1230 <= date || date <= 204) || (209 <= date && date <= 301)) {
+            $(this).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#f0f0f0", "border-radius": 0});
+        };    
+        $(".d0302").eq(1).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#f0f0f0", "border-radius": 0});
+    
+        $(".d0726 > p, .d0820 > p").text("여름방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .2vw)"});
+        $(".d1230 > p, .d0204 > p").text("겨울방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .2vw)"});
+        $(".d0301").eq(0).find("p").text("봄방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .2vw)"});
+        $(".d0209 > p").text("봄방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .2vw)"});
+    } else if(840 <= window.innerWidth || window.innerWidth < 1440) {
+        if((726 <= date && date <= 820) || (1230 <= date || date <= 204) || (209 <= date && date <= 301)) {
+            $(this).find("p").css({"width": "calc(40vw / 7)", "height": "2.5vh", "margin": "calc(2vw - 2.5vh) 0 0.5vh 0", "background": "#f0f0f0", "border-radius": 0});
+        };    
+        $(".d0302").eq(1).find("p").css({"width": "calc(40vw / 7)", "height": "2.5vh", "margin": "calc(2vw - 2.5vh) 0 0.5vh 0", "background": "#f0f0f0", "border-radius": 0});
+    
+        $(".d0726 > p, .d0820 > p").text("여름방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((40vw / 7 / 4) - .2vw)"});
+        $(".d1230 > p, .d0204 > p").text("겨울방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((40vw / 7 / 4) - .2vw)"});
+        $(".d0301").eq(0).find("p").text("봄방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((40vw / 7 / 4) - .2vw)"});
+        $(".d0209 > p").text("봄방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((40vw / 7 / 4) - .2vw)"});
+    };
 
-    $(".d0726 > p, .d0820 > p").text("여름방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
-    $(".d1230 > p, .d0204 > p").text("겨울방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
-    $(".d0301").eq(0).find("p").text("봄방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
-    $(".d0209 > p").text("봄방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
 });
 
 // 시험 표시
 $("td").each(function () {
     date = Number($(this).attr("class")?.substr(1, 4));
 
-    if(date == 323 || date == 428 || (501 <= date && date <= 503) || (703 <= date && date <=707) || date == 906 || (1010 <= date && date <= 1013) || date == 1121 || (1207 <= date && date <= 1208) || (1211 <= date && date <= 1213)) {
-        $(this).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#ff8080", "border-radius": 0});
-    };    
-
-    $(".d0428 > p, .d1010 > p").text("중간고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
-    $(".d0703 > p, .d1207 > p").text("기말고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
-    $(".d0323 > p, .d0906 > p, .d1121 > p").text("모의고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
+    if(window.innerWidth < 840) {
+        if(date == 323 || date == 428 || (501 <= date && date <= 503) || (703 <= date && date <=707) || date == 906 || (1010 <= date && date <= 1013) || date == 1121 || (1207 <= date && date <= 1208) || (1211 <= date && date <= 1213)) {
+            $(this).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#ff8080", "border-radius": 0});
+        };    
+    
+        $(".d0428 > p, .d1010 > p").text("중간고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((80vw / 7 / 4) - .2vw)"});
+        $(".d0703 > p, .d1207 > p").text("기말고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((80vw / 7 / 4) - .2vw)"});
+        $(".d0323 > p, .d0906 > p, .d1121 > p").text("모의고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((80vw / 7 / 4) - .2vw)"});
+    } else if(840 <= window.innerWidth || window.innerWidth < 1440) {
+        if(date == 323 || date == 428 || (501 <= date && date <= 503) || (703 <= date && date <=707) || date == 906 || (1010 <= date && date <= 1013) || date == 1121 || (1207 <= date && date <= 1208) || (1211 <= date && date <= 1213)) {
+            $(this).find("p").css({"width": "calc(40vw / 7)", "height": "2.5vh", "margin": "calc(2vw - 2.5vh) 0 0.5vh 0", "background": "#ff8080", "border-radius": 0});
+        };    
+    
+        $(".d0428 > p, .d1010 > p").text("중간고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((40vw / 7 / 4) - .2vw)"});
+        $(".d0703 > p, .d1207 > p").text("기말고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((40vw / 7 / 4) - .2vw)"});
+        $(".d0323 > p, .d0906 > p, .d1121 > p").text("모의고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((40vw / 7 / 4) - .2vw)"});
+    };
 });
