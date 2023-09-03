@@ -186,7 +186,7 @@ if($("#todaySchedule > p:nth-of-type(2)").text() == "undefined") {
 };
 
 week = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
-week = week[new Date(date).getDay()];
+week = week[new Date(todayDate).getDay()];
 
 if($(".d" + month + date).css("color") == "rgb(255, 0, 0)" || $(".d" + month + date).css("color") == "rgb(0, 0, 255)") {
     index = 0;
