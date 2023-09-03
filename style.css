@@ -28,7 +28,11 @@
     #todaySchedule {width: 80vw; margin: 5vh 0 0 10vw;}
     #todaySchedule > p:nth-of-type(1) {text-align: left; font-size: 30px; font-weight: bolder; margin-bottom: 1vh;}
     #todaySchedule > p:nth-of-type(1) > span {margin-left: 2vw; font-size: 24px;}
-    #todaySchedule > p:nth-of-type(2) {text-align: left; font-size: 24px; line-height: 1.6;}
+    #todaySchedule > p:nth-of-type(2) {text-align: left; font-size: 24px; line-height: 1.6; margin: 2vh 0;}
+    #todaySchedule > div {display: flex;}
+    #todaySchedule > div > p {text-align: left; font-size: 24px; line-height: 1.6; margin-right: 5vw;}
+    #todaySchedule > div > p > span:nth-of-type(2n-1) {font-size: 20px; text-align: left; font-weight: bolder; display: inline-block; width: 70px;}
+    #todaySchedule > div > p > span:nth-of-type(2n) {margin-left: 2vw; font-size: 20px; opacity: .6;}
 
 }
 
@@ -59,5 +63,10 @@
     #todaySchedule > p:nth-of-type(1) {text-align: left; font-size: 24px; font-weight: bolder; margin-bottom: 1vh;}
     #todaySchedule > p:nth-of-type(1) > span {margin-left: 2vw; font-size: 16px;}
     #todaySchedule > p:nth-of-type(2) {text-align: left; font-size: 20px; line-height: 1.6;}
+
+    #todaySchedule > div {display: flex;}
+    #todaySchedule > div > p {text-align: left; font-size: 20px; line-height: 1.6; margin-right: 5vw;}
+    #todaySchedule > div > p > span:nth-of-type(2n-1) {font-size: 14px; text-align: left; font-weight: bolder; width: 50px; display: none;}
+    #todaySchedule > div > p > span:nth-of-type(2n) {margin-left: 2vw; font-size: 14px; opacity: .6;}
 
 }

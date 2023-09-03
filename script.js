@@ -164,12 +164,12 @@ n = scheduleList.indexOf(today);
 
 week = ["일", "월", "화", "수", "목", "금", "토"];
 if (month == "01" || month == "02") {
-    date = "2024-" + month + "-" + date;
+    todayDate = "2024-" + month + "-" + date;
 } else {
-    date = "2023-" + month + "-" + date;
+    todayDate = "2023-" + month + "-" + date;
 };
 
-week = week[new Date(date).getDay()];
+week = week[new Date(todayDate).getDay()];
 
 $("#todaySchedule").append("<p>" + schedule.schedule[n] + "</p>");
 $("#todaySchedule > p:nth-of-type(1)").append("<span>" + Number(today.substr(1, 2)) + "월 " + Number(today.substr(3, 2)) + "일 " + week + "요일</span>");
@@ -177,6 +177,26 @@ $("#todaySchedule > p:nth-of-type(1)").append("<span>" + Number(today.substr(1, 
 if($("#todaySchedule > p:nth-of-type(2)").text() == "undefined") {
     $("#todaySchedule > p:nth-of-type(2)").empty().text("오늘 일정이 없습니다.").css("opacity", ".5");
 };
+
+if($(".d" + month + date).css("color") == "rgb(255, 0, 0)" || $(this).css("color") == "rgb(0, 0, 255)") {
+    index = 0;
+} else {
+    index = timetableList.indexOf(week, 0);
+};
+
+timetable1 = "<span>1교시</span>" + timetable[Object.keys(timetable)[index]][0];
+timetable2 = "<span>2교시</span>" + timetable[Object.keys(timetable)[index]][1];
+timetable3 = "<span>3교시</span>" + timetable[Object.keys(timetable)[index]][2];
+timetable4 = "<span>4교시</span>" + timetable[Object.keys(timetable)[index]][3];
+timetable5 = "<span>5교시</span>" + timetable[Object.keys(timetable)[index]][4];
+timetable6 = "<span>6교시</span>" + timetable[Object.keys(timetable)[index]][5];
+timetable7 = "<span>7교시</span>" + timetable[Object.keys(timetable)[index]][6];
+
+$("#todaySchedule").append("<div><p>" + timetable1 + "<br>" + timetable2 + "<br>" + timetable3 + "<br>" + timetable4 + "</p><p>" + timetable5 + "<br>" + timetable6 + "<br>" + timetable7 + "</p></div>");
+
+if($("#todaySchedule > div").text().replace(/[0-9|교시|-]/g, "").length == 0) {
+    $("#todaySchedule > div > p > span:nth-of-type(2n-1)").css("display", "inline-block")
+}
 
 // toToday 누르면 오늘 날짜로 이동
 $("#toToday > div").text(Number(today.substr(3, 2)));
@@ -234,19 +254,26 @@ $("td").each(function () {
 $("td").each(function () {
     date = Number($(this).attr("class")?.substr(1, 4));
 
-    if(726 <= date && date <= 820) {
+    if((726 <= date && date <= 820) || (1230 <= date || date <= 204) || (209 <= date && date <= 301)) {
         $(this).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#f0f0f0", "border-radius": 0});
     };    
-    if(1230 <= date || date <= 204) {
-        $(this).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#f0f0f0", "border-radius": 0});
-    };
-    if(209 <= date && date <= 301) {
-        $(this).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#f0f0f0", "border-radius": 0});
-    };
     $(".d0302").eq(1).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#f0f0f0", "border-radius": 0});
 
     $(".d0726 > p, .d0820 > p").text("여름방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
     $(".d1230 > p, .d0204 > p").text("겨울방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
     $(".d0301").eq(0).find("p").text("봄방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
     $(".d0209 > p").text("봄방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
+});
+
+// 시험 표시
+$("td").each(function () {
+    date = Number($(this).attr("class")?.substr(1, 4));
+
+    if(date == 323 || date == 428 || (501 <= date && date <= 503) || (703 <= date && date <=707) || date == 906 || (1010 <= date && date <= 1013) || date == 1121 || (1207 <= date && date <= 1208) || (1211 <= date && date <= 1213)) {
+        $(this).find("p").css({"width": "calc(80vw / 7)", "height": "2.5vh", "margin": "calc(5vw - 2.5vh) 0 0.5vh 0", "background": "#ff8080", "border-radius": 0});
+    };    
+
+    $(".d0428 > p, .d1010 > p").text("중간고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
+    $(".d0703 > p, .d1207 > p").text("기말고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
+    $(".d0323 > p, .d0906 > p, .d1121 > p").text("모의고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((80vw / 7 / 4) - .5vw)"});
 });
