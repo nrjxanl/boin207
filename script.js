@@ -1,7 +1,10 @@
 // 화면 width 변경 시 새로고침
-jQuery(function() {
-    window.onresize = function(){
-      document.location.reload();
+before = $(this).width();
+
+$(window).resize(function () {
+    after = $(this).width();
+    if (after != before) {
+        location.reload();
     };
 });
 
