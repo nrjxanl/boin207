@@ -293,7 +293,7 @@ $("td").each(function () {
     
         $(".d0428 > p, .d1010 > p").text("중간고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((250px / 7 / 4) - .2vw)"});
         $(".d0703 > p, .d1207 > p").text("기말고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((250px / 7 / 4) - .2vw)"});
-        $(".d0323 > p, .d0906 > p, .d1121 > p").text("모의고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((250px / 7 / 4) - .2vw)"});
+        $(".d0323 > p, .d0906 > p, .d1219 > p").text("모의고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((250px / 7 / 4) - .2vw)"});
         
         if((726 <= date && date <= 820) || (1230 <= date || date <= 204) || (209 <= date && date <= 301)) {
             $(this).find("p").css({"width": "calc(250px / 7)", "height": "5vw", "margin": ".5vh 0 0 0", "background": "#f0f0f0", "border-radius": 0});
@@ -312,7 +312,7 @@ $("td").each(function () {
     
         $(".d0428 > p, .d1010 > p").text("중간고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((300px / 7 / 4) - .2vw)"});
         $(".d0703 > p, .d1207 > p").text("기말고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((300px / 7 / 4) - .2vw)"});
-        $(".d0323 > p, .d0906 > p, .d1121 > p").text("모의고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((300px / 7 / 4) - .2vw)"});
+        $(".d0323 > p, .d0906 > p, .d1219 > p").text("모의고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((300px / 7 / 4) - .2vw)"});
         
         if((726 <= date && date <= 820) || (1230 <= date || date <= 204) || (209 <= date && date <= 301)) {
             $(this).find("p").css({"width": "calc(300px / 7)", "height": "5vw", "margin": ".5vh 0 0 0", "background": "#f0f0f0", "border-radius": 0});
@@ -331,7 +331,7 @@ $("td").each(function () {
     
         $(".d0428 > p, .d1010 > p").text("중간고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((400px / 7 / 4) - .2vw)"});
         $(".d0703 > p, .d1207 > p").text("기말고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((400px / 7 / 4) - .2vw)"});
-        $(".d0323 > p, .d0906 > p, .d1121 > p").text("모의고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((400px / 7 / 4) - .2vw)"});
+        $(".d0323 > p, .d0906 > p, .d1219 > p").text("모의고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((400px / 7 / 4) - .2vw)"});
         
         if((726 <= date && date <= 820) || (1230 <= date || date <= 204) || (209 <= date && date <= 301)) {
             $(this).find("p").css({"width": "calc(400px / 7)", "height": "4vw", "margin": ".5vh 0 0 0", "background": "#f0f0f0", "border-radius": 0});
@@ -350,7 +350,7 @@ $("td").each(function () {
     
         $(".d0428 > p, .d1010 > p").text("중간고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((400px / 7 / 4) - .2vw)"});
         $(".d0703 > p, .d1207 > p").text("기말고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((400px / 7 / 4) - .2vw)"});
-        $(".d0323 > p, .d0906 > p, .d1121 > p").text("모의고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((400px / 7 / 4) - .2vw)"});
+        $(".d0323 > p, .d0906 > p, .d1219 > p").text("모의고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((400px / 7 / 4) - .2vw)"});
         
         if((726 <= date && date <= 820) || (1230 <= date || date <= 204) || (209 <= date && date <= 301)) {
             $(this).find("p").css({"width": "calc(400px / 7)", "height": "3vw", "margin": ".5vh 0 0 0", "background": "#f0f0f0", "border-radius": 0});
@@ -369,7 +369,7 @@ $("td").each(function () {
     
         $(".d0428 > p, .d1010 > p").text("중간고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((420px / 7 / 4) - .2vw)"});
         $(".d0703 > p, .d1207 > p").text("기말고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((420px / 7 / 4) - .2vw)"});
-        $(".d0323 > p, .d0906 > p, .d1121 > p").text("모의고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((420px / 7 / 4) - .2vw)"});
+        $(".d0323 > p, .d0906 > p, .d1219 > p").text("모의고사").css({"color": "#fff", "background": "#ff8080", "font-size": "calc((420px / 7 / 4) - .2vw)"});
         
         if((726 <= date && date <= 820) || (1230 <= date || date <= 204) || (209 <= date && date <= 301)) {
             $(this).find("p").css({"width": "calc(420px / 7)", "height": "30px", "margin": ".5vh 0 0 0", "background": "#f0f0f0", "border-radius": 0});
