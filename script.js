@@ -287,7 +287,7 @@ $("td").each(function () {
     date = Number($(this).attr("class")?.substr(1, 4));
 
     if(window.innerWidth < 300) {
-        if(date == 323 || date == 428 || (501 <= date && date <= 503) || (703 <= date && date <=707) || date == 906 || (1010 <= date && date <= 1013) || date == 1121 || (1207 <= date && date <= 1208) || (1211 <= date && date <= 1213)) {
+        if(date == 323 || date == 428 || (501 <= date && date <= 503) || (703 <= date && date <=707) || date == 906 || (1010 <= date && date <= 1013) || date == 1219 || (1207 <= date && date <= 1208) || (1211 <= date && date <= 1213)) {
             $(this).find("p").css({"width": "calc(250px / 7)", "height": "5vw", "margin": ".5vh 0 0 0", "background": "#ff8080", "border-radius": 0});
         };    
     
@@ -306,7 +306,7 @@ $("td").each(function () {
         $(".d0209 > p").text("봄방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((250px / 7 / 4) - .2vw)"});
 
     } else if(300 <= window.innerWidth && window.innerWidth < 425) {
-        if(date == 323 || date == 428 || (501 <= date && date <= 503) || (703 <= date && date <=707) || date == 906 || (1010 <= date && date <= 1013) || date == 1121 || (1207 <= date && date <= 1208) || (1211 <= date && date <= 1213)) {
+        if(date == 323 || date == 428 || (501 <= date && date <= 503) || (703 <= date && date <=707) || date == 906 || (1010 <= date && date <= 1013) || date == 1219 || (1207 <= date && date <= 1208) || (1211 <= date && date <= 1213)) {
             $(this).find("p").css({"width": "calc(300px / 7)", "height": "5vw", "margin": ".5vh 0 0 0", "background": "#ff8080", "border-radius": 0});
         };    
     
@@ -325,7 +325,7 @@ $("td").each(function () {
         $(".d0209 > p").text("봄방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((300px / 7 / 4) - .2vw)"});
 
     } else if(425 <= window.innerWidth && window.innerWidth < 640) {
-        if(date == 323 || date == 428 || (501 <= date && date <= 503) || (703 <= date && date <=707) || date == 906 || (1010 <= date && date <= 1013) || date == 1121 || (1207 <= date && date <= 1208) || (1211 <= date && date <= 1213)) {
+        if(date == 323 || date == 428 || (501 <= date && date <= 503) || (703 <= date && date <=707) || date == 906 || (1010 <= date && date <= 1013) || date == 1219 || (1207 <= date && date <= 1208) || (1211 <= date && date <= 1213)) {
             $(this).find("p").css({"width": "calc(400px / 7)", "height": "4vw", "margin": ".5vh 0 0 0", "background": "#ff8080", "border-radius": 0});
         };    
     
@@ -344,7 +344,7 @@ $("td").each(function () {
         $(".d0209 > p").text("봄방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((400px / 7 / 4) - .2vw)"});
 
     } else if(640 <= window.innerWidth && window.innerWidth < 840) {
-        if(date == 323 || date == 428 || (501 <= date && date <= 503) || (703 <= date && date <=707) || date == 906 || (1010 <= date && date <= 1013) || date == 1121 || (1207 <= date && date <= 1208) || (1211 <= date && date <= 1213)) {
+        if(date == 323 || date == 428 || (501 <= date && date <= 503) || (703 <= date && date <=707) || date == 906 || (1010 <= date && date <= 1013) || date == 1219 || (1207 <= date && date <= 1208) || (1211 <= date && date <= 1213)) {
             $(this).find("p").css({"width": "calc(400px / 7)", "height": "3vw", "margin": ".5vh 0 0 0", "background": "#ff8080", "border-radius": 0});
         };    
     
@@ -363,7 +363,7 @@ $("td").each(function () {
         $(".d0209 > p").text("봄방학").css({"color": "#00000080", "background": "#f0f0f0", "font-size": "calc((400px / 7 / 4) - .2vw)"});
 
     } else if(840 <= window.innerWidth) {
-        if(date == 323 || date == 428 || (501 <= date && date <= 503) || (703 <= date && date <=707) || date == 906 || (1010 <= date && date <= 1013) || date == 1121 || (1207 <= date && date <= 1208) || (1211 <= date && date <= 1213)) {
+        if(date == 323 || date == 428 || (501 <= date && date <= 503) || (703 <= date && date <=707) || date == 906 || (1010 <= date && date <= 1013) || date == 1219 || (1207 <= date && date <= 1208) || (1211 <= date && date <= 1213)) {
             $(this).find("p").css({"width": "calc(420px / 7)", "height": "30px", "margin": ".5vh 0 0 0", "background": "#ff8080", "border-radius": 0});
         };    
     
