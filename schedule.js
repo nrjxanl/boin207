@@ -8,7 +8,7 @@ timetable = {
     "mon": ["지구과학 I<span>전아림</span>", "화학 I<span>이은주</span>", "수학 II<span>김성미</span>", "사회 문제 탐구<span>서정민</span>", "물리학 I<span>장종목</span>", "영어 II<span>백기곤</span>", "일본어 I<span>양혜리</span>"],
     "tue": ["독서<span>김용진</span>", "지구과학 I<span>김태식</span>", "언어와 매체<span>강이욱</span>", "물리학 I<span>장종목</span>", "영어 II<span>백기곤</span>", "기하<span>김보성</span>", "음악<span>한송이</span>"],
     "wed": ["영어 II<span>백기곤</span>", "수학 II<span>조재희</span>", "언어와 매체<span>이하은</span>", "사회 문제 탐구<span>서정민</span>", "물리학 I<span>장종목</span>", "스포츠 생활<span>이다영</span>", "화학 I<span>김현화</span>"],
-    "thu": ["기하<span>김보성</span>", "화학 I<span>이은주</span>", "진로<span>백기곤</span>", "수학 II<span>김성미</span>", "독서<span>류신형</span>", "사회 문제 탐구<span>양승범</span>", "지구과학 I<span>전아림</span>"],
-    "fri": ["독서<span>류신형</span>", "수학 II<span>김성미</span>", "스포츠 생활<span>이다영</span>", "일본어 I<span>양혜리</span>", "창체<span></span>", "창체<span></span>", "-<span></span>"],
+    "thu": ["기하<span>김보성</span>", "화학 I<span>이은주</span>", "진로<span>백기곤</span>", "수학 II<span>김성미</span>", "독서<span>곽광용</span>", "사회 문제 탐구<span>양승범</span>", "지구과학 I<span>전아림</span>"],
+    "fri": ["독서<span>곽광용</span>", "수학 II<span>김성미</span>", "스포츠 생활<span>이다영</span>", "일본어 I<span>양혜리</span>", "창체<span></span>", "창체<span></span>", "-<span></span>"],
     "sat": ["-<span></span>", "-<span></span>", "-<span></span>", "-<span></span>", "-<span></span>", "-<span></span>", "-<span></span>"],
 }
