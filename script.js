@@ -9,7 +9,7 @@ $(window).resize(function () {
 });
 
 // 이번 달 table 제외 display: none 설정
-newDate = new Date();
+newDate = new Date("2023", "10", "05");
 month = newDate.getMonth();
 
 $("table").css("display", "none");
@@ -170,7 +170,7 @@ today = "d" + month + date;
 $("." + today).css("box-shadow", "0 0 0 2px #c8c8c8 inset");
 
 // 오늘의 일정 불러오기
-n = scheduleList.indexOf(today);
+n = schedule.date.indexOf(today);
 
 week = ["일", "월", "화", "수", "목", "금", "토"];
 if (month == "01" || month == "02") {
@@ -193,7 +193,7 @@ week = week[new Date(todayDate).getDay()];
 
 if($(".d" + month + date).css("color") == "rgb(255, 0, 0)" || $(".d" + month + date).css("color") == "rgb(0, 0, 255)") {
     index = 0;
-} else if($(".d" + month + date).css("color") == "rgb(0, 0, 0)") {
+} else {
     index = timetableList.indexOf(week, 0);
 };
 
