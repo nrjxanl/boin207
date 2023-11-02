@@ -9,7 +9,7 @@ $(window).resize(function () {
 });
 
 // 이번 달 table 제외 display: none 설정
-newDate = new Date("2023", "10", "05");
+newDate = new Date();
 month = newDate.getMonth();
 
 $("table").css("display", "none");
